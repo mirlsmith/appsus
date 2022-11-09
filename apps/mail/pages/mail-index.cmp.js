@@ -12,13 +12,18 @@ export default {
         return {
             mails: [],
             filterBy: {
-
+                type: 'inbox',
+                word: ''
             },
 
         }
     },
     computed: {
+        filterType() {
+            return this.$route.params.filterBy
+        },
         mailsToShow(){
+            //I AM HERE
             return this.mails
         }
     },
@@ -27,6 +32,13 @@ export default {
             .then(mails => {
                 this.mails = mails
             })
+    },
+    watch: {
+        filterType() {
+            console.log('filter is now', this.filterType);
+            this.filterBy.type = this.filterType
+            console.log('filter for mails is now', this.filterBy);
+        }
     },
 
     components: {

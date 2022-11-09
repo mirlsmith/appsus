@@ -29,7 +29,7 @@ const routerOptions = {
 			path: '/mail',
 			component: mailPage,
 			children: [
-				{ path: '/mail/index', component: mailIndexPage }, 
+				{ path: '/mail/index/:filterBy?', component: mailIndexPage },
 				{ path: '/mail/details/:id', component: mailDetailsPage }
 			]
 		},

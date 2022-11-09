@@ -7,11 +7,11 @@ export default {
         <section class="mail-page">
             <nav class="mail-sidenav">
                 <button>Compose</button>
-                <a href="#">Inbox</a>
-                <a href="#">Starred</a>
-                <a href="#">Sent Mail</a>
-                <a href="#">Drafts</a>
-                <a href="#">Trash</a>
+                <router-link to="/mail/index/inbox">Inbox</router-link>
+                <router-link to="/mail/index/starred">Starred</router-link>
+                <router-link to="/mail/index/sent">Sent Mail</router-link>
+                <router-link to="/mail/index/drafts">Drafts</router-link>
+                <router-link to="/mail/index/trash">Trash</router-link>
             </nav>
             <header class="mail-header">
                 <input type="search" placeholder="Search" />
