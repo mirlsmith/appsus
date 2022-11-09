@@ -1,0 +1,13 @@
+.keep-page {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 50px auto;
+}
+
+.keep-page .note-filters {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
