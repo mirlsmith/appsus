@@ -1,7 +1,8 @@
-.main-layout {
-  margin: 0 auto;
-  padding-left: 1.6rem;
-  padding-right: 1.6rem;
+.full {
+  width: 100%;
 }
 
-
+.main-layout > *:not(.full) {
+  max-width: 1440px;
+  margin-inline: auto;
+}
