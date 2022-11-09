@@ -4,6 +4,11 @@
   padding: 1em;
 }
 
+.app-header .main-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media(max-width: 720px) {
   .app-header {
     background-color: var(--clr3);
