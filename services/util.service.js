@@ -1,5 +1,8 @@
 export const utilService = {
-    makeId
+    makeId,
+    loadFromStorage,
+    getRandomIntInclusive,
+    saveToStorage
 }
 
 
@@ -10,6 +13,15 @@ function makeId(length = 5) {
         txt += possible.charAt(Math.floor(Math.random() * possible.length))
     }
     return txt
+}
+
+function loadFromStorage(key) {
+    let data = localStorage.getItem(key)
+    return (data) ? JSON.parse(data) : undefined
+}
+
+function saveToStorage(key, value) {
+    localStorage.setItem(key, JSON.stringify(value) || null)
 }
 
 function getRandomIntInclusive(min, max) {
