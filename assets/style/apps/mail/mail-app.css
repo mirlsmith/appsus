@@ -53,3 +53,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.mail-details {
+    margin-top: 90px;
+    margin-left: 160px;
+    padding-left: 20px;
+}
