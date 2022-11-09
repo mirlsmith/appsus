@@ -10,4 +10,71 @@
   flex-direction: column;
   text-align: center;
   gap: 10px;
+  font-size: 36px;
+}
+
+.note-list {
+  columns: auto 5;
+}
+
+.note-preview {
+  background-color: var(--clr2);
+  padding: 15px;
+  padding-block-end: 48px;
+  position: relative;
+  cursor: pointer;
+  margin: 25px;
+  margin-block-start: 0;
+}
+
+.note-preview .note-preview-actions {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: .3s;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  font-size: 1.1em;
+  cursor: auto;
+}
+
+.note-preview:hover .note-preview-actions {
+  opacity: 1;
+  bottom: 0;
+}
+
+.note-preview .note-preview-actions i {
+  border-radius: 50%;
+  padding: 7px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.note-preview .note-preview-actions i:hover {
+  background-color: rgba(154, 160, 166, 0.496);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* MODAL */
+
+.note-modal {
+  position: fixed;
+  inset: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 50%;
+  padding: 25px;
+}
+
+.note-modal .modal-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.note-modal .modal-title .title-actions * {
+  margin-inline: 5px;
 }
