@@ -4,7 +4,7 @@ export default {
     props:['mails'],
     template: `
         <section class="mail-list">
-            <ul>
+            <ul class="clean-list">
                 <li v-for="mail in mails" :key="mail.id">
                     <mail-preview :mail="mail"/>
                     <section class="actions">
