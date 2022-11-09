@@ -1,0 +1,74 @@
+[
+    {
+        "id": "m101",
+        "subject": "Best Books Of 2022",
+        "from": "email@bookdepository.com",
+        "to": "user@appsus.com",
+        "sentTimeStamp": "1665054314",
+        "body": "For self-gifting or to surprise the book lover in your life, we've been through all the books published this year and selected the best gift ideas.        From a bestselling cookbook to a must-read memoir, discover the full lists of books that are great book gifts to give in 2022.",
+        "isStarred": "false",
+        "isRemoved": "false",
+        "isRead": "true",
+        "labels": ["",""]
+    },
+    {
+        "id": "m102",
+        "subject": "Tell us how we did",
+        "from": "insights@united.com",
+        "to": "user@appsus.com",
+        "sentTimeStamp": "1616959394",
+        "body": "Your feedback means the world to us Hi Eyal, From all of us here at United, thank you for flying with us! It was a pleasure having you onboard for your trip from Newark to Tel Aviv. We would like to hear about your experience, as your input helps us find new ways to innovate, improve and recognize our employees for their great service.",
+        "isStarred": "true",
+        "isRemoved": "false",
+        "isRead": "true",
+        "labels": ["work"," "]
+    },
+    {
+        "id": "m103",
+        "subject": "Happy Birthday!",
+        "from": "friend@gmail.com",
+        "to": "user@appsus.com",
+        "sentTimeStamp": "1659262514",
+        "body": "Hope you're having a wonderful day! Have a very happy birthday! Can't wait to see you soon!!!",
+        "isStarred": "true",
+        "isRemoved": "true",
+        "isRead": "true",
+        "labels": ["friends",""]
+    },
+    {
+        "id": "m104",
+        "subject": "eTicket Itinerary and Receipt",
+        "from": "user@appsus.com",
+        "to": "bobby@gmail.com",
+        "sentTimeStamp": "1516252514",
+        "body": "Here are your fligt details. Have a great trip!",
+        "isStarred": "false",
+        "isRemoved": "false",
+        "isRead": "true",
+        "labels": ["work"," "]
+    },
+    {
+        "id": "m105",
+        "subject": "Can we set up a zoom meeting?",
+        "from": "mustafah@projects.com",
+        "to": "user@appsus.com",
+        "sentTimeStamp": "1571076914",
+        "body": "Hope all is well with you. There are some changes that may be happening with the company in the near future and we'd like to discuss some matters with you. Can we set up a zoom meeting for Wednesday sometime after 14:00? Thank you very much!",
+        "isStarred": "true",
+        "isRemoved": "true",
+        "isRead": "true",
+        "labels": ["work","important"]
+    },
+    {
+        "id": "m106",
+        "subject": "Price change to your Disney+ subscription",
+        "from": "disneyplus@mail.disneyplus.com",
+        "to": "user@appsus.com",
+        "sentTimeStamp": "1600928114",
+        "body": "We wanted to let you know of an upcoming price change to your Disney+ subscription. Effective on December 10, 2022, your subscription will now be called the Disney+ Premium plan and will change in price to $10.99 per month. Your payment method on file will be charged unless you cancel your subscription before December 10, 2022.",
+        "isStarred": "true",
+        "isRemoved": "false",
+        "isRead": "false",
+        "labels": ["important"," "]
+    }
+]

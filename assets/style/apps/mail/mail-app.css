@@ -1,0 +1,34 @@
+.mail-sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    background-color: #ddf0e4;
+    overflow-x: hidden;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.mail-header {
+    width: 100%;
+    padding: 20px;
+
+    background-color: #ddf0e4 ;
+    position: fixed;
+    top: 80px;
+    overflow: hidden;
+}
+
+.mail-header input[type=search] {
+    width: 60%;
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+}
+
+.mail-container {
+    margin: 160px;
+}

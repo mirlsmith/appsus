@@ -1,9 +1,9 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 @font-face {
     font-family: roboto-reg;
-    src: url(assets/fonts/Roboto/Roboto-Regular.ttf);
+    src: url('../../fonts/Roboto/Roboto-Regular.ttf');
 }
 @font-face {
     font-family: roboto-bold;
-    src: url(/assets/fonts/Roboto/Roboto-Bold.ttf);
+    src: url('../../fonts/Roboto/Roboto-Bold.ttf')
 }
