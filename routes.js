@@ -19,8 +19,8 @@ const routerOptions = {
 			path: '/keep',
 			component: keepPage,
 			children: [
-				// { path: '', component: noteIndexPage }, WHAT'S THIS???????
-				{ path: '/keep/details/:id', component: noteDetailsPage }
+				{ path: '/keep/details/:id', component: noteDetailsPage },
+				{ path: '/keep/:filterBy', component: keepPage }
 			]
 		},
 		{
