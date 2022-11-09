@@ -1,5 +1,5 @@
 const navLinks = [
-    { to: '/mail', label: 'Mail' },
+    { to: '/mail/index', label: 'Mail' },
     { to: '/keep', label: 'Keep' },
     // { to: '/books', label: 'Books' },
     { to: '/about', label: 'About' }
