@@ -5,8 +5,10 @@ export default {
     template: `
         <section class="mail-list">
             <ul class="clean-list">
-                <li v-for="mail in mails" :key="mail.id">
+                <li v-for="mail in mails" :key="mail.id"
+                    @click="showMailDetails(mail.id)">
                     <mail-preview :mail="mail"/>
+                    
                     <section class="actions">
 
                     </section>
@@ -21,6 +23,10 @@ export default {
         }
     },
     methods: {
+        showMailDetails(mailId) {
+            console.log('mail clicked');
+            this.$router.push(`/mail/details/${mailId}`)
+        }
 
     },
 

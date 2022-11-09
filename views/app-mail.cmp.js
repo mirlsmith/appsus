@@ -1,6 +1,6 @@
-import { mailService } from "../apps/mail/services/mail.service.js"
+// import { mailService } from "../apps/mail/services/mail.service.js"
 
-import mailList from '../apps/mail/cmps/mail-list.cmp.js'
+// import mailList from '../apps/mail/cmps/mail-list.cmp.js'
 
 export default {
     template: `
@@ -16,38 +16,39 @@ export default {
                 <input type="search" placeholder="Search" />
             </header>
 
-            <section class="mail-container">
+            <!-- <section class="mail-container">
                 <mail-list :mails="mailsToShow"/>
-
-            </section>
+            </section> -->
             
             <!-- <router-link to="/mail/details">details</router-link> -->
-            <!-- <router-view></router-view> -->
+            <router-view></router-view>
+
         </section>
     `,
-    data(){
-        return {
-            mails: [],
-            filterBy: {
+    // data(){
+    //     return {
+    //         mails: [],
+    //         filterBy: {
 
-            }
-        }
-    },
-    computed: {
-        mailsToShow(){
-            return this.mails
-        }
-    },
-    created() {
-        mailService.query()
-            .then(mails => {
-                this.mails = mails
-            })
-    },
+    //         },
 
-    components: {
-        mailService,
-        mailList
-    }
+    //     }
+    // },
+    // computed: {
+    //     mailsToShow(){
+    //         return this.mails
+    //     }
+    // },
+    // created() {
+    //     mailService.query()
+    //         .then(mails => {
+    //             this.mails = mails
+    //         })
+    // },
+
+    // components: {
+    //     mailService,
+    //     mailList
+    // }
 }
 
