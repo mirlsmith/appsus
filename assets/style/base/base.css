@@ -3,7 +3,7 @@
 }
 
 html {
-  
+    font-family: roboto-reg, sans-serif;
 }
 
 body {
@@ -18,7 +18,7 @@ h4,
 h5,
 h6 {
   margin: 0 0 1em;
-  font-family: 'Edu VIC WA NT Beginner', cursive;
+  font-family: roboto-bold, sans-serif;
 }
 
 p {
