@@ -17,14 +17,9 @@ export default {
 
     computed: {
         formattedDate() {
-            const date = new Date(+this.mail.sentTimeStamp*1000)
-            // const date = new Date()
+            const date = new Date(this.mail.sentTimeStamp*1000)
             const options = { day: '2-digit', month: 'short' }
             return date.toLocaleDateString('en-GB', options)
-            // return date.toLocaleDateString()
-            // return this.mail.sentTimeStamp
-
-            // return new Intl.DateTimeFormat('en-US').format(date)
         }
     },
 

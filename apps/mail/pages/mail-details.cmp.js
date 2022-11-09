@@ -2,13 +2,23 @@ import { mailService } from "../services/mail.service.js";
 
 export default {
     template: `
-        <section class="mail-details">
-          <section class="mail-actions"></section>
+        <section v-if="mail" class="mail-details">
+          <section class="mail-actions">
+          <i 
+            @click="goBack()"
+            class="fa-solid fa-arrow-left"></i>
+          <i
+            @click="removeMail()" 
+            class="fa-solid fa-trash-can"></i>
+          </section>
+          <!-- <p>{{mail}}</p> -->
+          <h1>{{mail.subject}}</h1>
+          <h4>{{mail.from}}</h4>
+          <h4>{{formattedDate}}</h4>
+          <p>{{mail.body}}</p>
+
+          <hr />
           <p>{{mail}}</p>
-          <!-- <h1>{{mail.subject}}</h1> -->
-          <!-- <h4>{{mail.from}}</h4> -->
-          <!-- <h4>{{formattedDate}}</h4> -->
-          <!-- <p>{{mail.body}}</p> -->
 
 
         </section>
@@ -27,10 +37,29 @@ export default {
       }
     },
     methods: {
+      goBack() {
+        this.$router.push(`/mail/index`)
+      },
+      removeMail() {
+        // console.log('removed status before remove', this.mail.isRemoved);
+        if (this.mail.isRemoved) mailService.remove(this.mail.id).then(()=> {
+          // console.log('removed status after async remove', this.mail.isRemoved)
+          this.goBack()
+        })
+        else {
+          this.mail.isRemoved = true
+          // console.log('saved mail after isremoved = true', this.mail);
+          mailService.save(this.mail).then(()=>{
+            // console.log('removed status after sync remove', this.mail.isRemoved)
+            this.goBack()
+          })
+          
+        }
+      }
     },
     computed: {
       formattedDate() {
-        const date = new Date(+this.mail.sentTimeStamp*1000)
+        const date = new Date(this.mail.sentTimeStamp*1000)
         const options = { month: 'long', day: '2-digit', year: 'numeric' }
         return date.toLocaleDateString('en-GB', options)
     }

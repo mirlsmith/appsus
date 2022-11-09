@@ -24,7 +24,6 @@ export default {
     },
     methods: {
         showMailDetails(mailId) {
-            console.log('mail clicked');
             this.$router.push(`/mail/details/${mailId}`)
         }
 

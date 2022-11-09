@@ -9,7 +9,7 @@ const loggedInUser = {
     fullname: 'Merah Geshi'
 }
 
-const MAILS_KEY = 'mails'
+const MAILS_KEY = 'mailsDB'
 _createMails()
 
 export const mailService = {
@@ -32,8 +32,8 @@ function remove(mailId) {
 }
 
 function save(mail) {
-    // if (mail.id) return storageService.put(MAILS_KEY, mail) //utilize for DRAFT feature?
-    // else 
+    if (mail.id) return storageService.put(MAILS_KEY, mail) //utilize for DRAFT feature?
+    else 
     return storageService.post(MAILS_KEY, mail)
 }
 

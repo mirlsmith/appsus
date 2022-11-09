@@ -8,6 +8,11 @@
     overflow-x: hidden;
     padding-top: 20px;
     z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 25px;
 }
 
 .mail-header {
@@ -57,5 +62,12 @@
 .mail-details {
     margin-top: 90px;
     margin-left: 160px;
-    padding-left: 20px;
+    padding: 20px;
+}
+
+.mail-details .mail-actions {
+    font-size: 30px;
+    display: flex;
+    gap: 20px;
+    padding: 10px 10px 20px 10px;
 }

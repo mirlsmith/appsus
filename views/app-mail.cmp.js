@@ -11,6 +11,7 @@ export default {
                 <a href="#">Starred</a>
                 <a href="#">Sent Mail</a>
                 <a href="#">Drafts</a>
+                <a href="#">Trash</a>
             </nav>
             <header class="mail-header">
                 <input type="search" placeholder="Search" />
