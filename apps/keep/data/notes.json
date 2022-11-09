@@ -11,7 +11,151 @@
     "id": "n102",
     "type": "note-img",
     "info": {
-      "url": "http://some-img/me",
+      "url": "https://cdn.akamai.steamstatic.com/steam/apps/1172470/capsule_616x353.jpg?t=1660674992",
+      "title": "Bobi and Me"
+    },
+    "style": {
+      "backgroundColor": "#00d"
+    }
+  },
+  {
+    "id": "n103",
+    "type": "note-todos",
+    "info": {
+      "label": "Get my stuff together",
+      "todos": [
+        {
+          "txt": "Driving liscence",
+          "doneAt": null
+        },
+        {
+          "txt": "Coding power",
+          "doneAt": 187111111
+        }
+      ]
+    }
+  },
+  {
+    "id": "n101",
+    "type": "note-txt",
+    "isPinned": true,
+    "info": {
+      "txt": "Fullstack Me Baby!"
+    }
+  },
+  {
+    "id": "n102",
+    "type": "note-img",
+    "info": {
+      "url": "https://cdn.akamai.steamstatic.com/steam/apps/1172470/capsule_616x353.jpg?t=1660674992",
+      "title": "Bobi and Me"
+    },
+    "style": {
+      "backgroundColor": "#00d"
+    }
+  },
+  {
+    "id": "n103",
+    "type": "note-todos",
+    "info": {
+      "label": "Get my stuff together",
+      "todos": [
+        {
+          "txt": "Driving liscence",
+          "doneAt": null
+        },
+        {
+          "txt": "Coding power",
+          "doneAt": 187111111
+        }
+      ]
+    }
+  },
+  {
+    "id": "n101",
+    "type": "note-txt",
+    "isPinned": true,
+    "info": {
+      "txt": "Fullstack Me Baby!"
+    }
+  },
+  {
+    "id": "n102",
+    "type": "note-img",
+    "info": {
+      "url": "https://cdn.akamai.steamstatic.com/steam/apps/1172470/capsule_616x353.jpg?t=1660674992",
+      "title": "Bobi and Me"
+    },
+    "style": {
+      "backgroundColor": "#00d"
+    }
+  },
+  {
+    "id": "n103",
+    "type": "note-todos",
+    "info": {
+      "label": "Get my stuff together",
+      "todos": [
+        {
+          "txt": "Driving liscence",
+          "doneAt": null
+        },
+        {
+          "txt": "Coding power",
+          "doneAt": 187111111
+        }
+      ]
+    }
+  },
+  {
+    "id": "n101",
+    "type": "note-txt",
+    "isPinned": true,
+    "info": {
+      "txt": "Fullstack Me Baby!"
+    }
+  },
+  {
+    "id": "n102",
+    "type": "note-img",
+    "info": {
+      "url": "https://cdn.akamai.steamstatic.com/steam/apps/1172470/capsule_616x353.jpg?t=1660674992",
+      "title": "Bobi and Me"
+    },
+    "style": {
+      "backgroundColor": "#00d"
+    }
+  },
+  {
+    "id": "n103",
+    "type": "note-todos",
+    "info": {
+      "label": "Get my stuff together",
+      "todos": [
+        {
+          "txt": "Driving liscence",
+          "doneAt": null
+        },
+        {
+          "txt": "Coding power",
+          "doneAt": 187111111
+        }
+      ]
+    }
+  },
+  {
+    "id": "n101",
+    "type": "note-txt",
+    "isPinned": true,
+    "info": {
+      "txt": "Fullstack Me Baby!"
+    }
+  },
+  {
+    "id": "n102",
+    "type": "note-img",
+    "info": {
+      "url": "https://cdn.akamai.steamstatic.com/steam/apps/1172470/capsule_616x353.jpg?t=1660674992",
       "title": "Bobi and Me"
     },
     "style": {

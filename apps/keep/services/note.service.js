@@ -37,7 +37,7 @@ function save(note) {
 function _createNotes() {
     let notes = utilService.loadFromStorage(NOTES_STORAGE_KEY)
     if (!notes || !notes.length) {
-        notes = notesData
+        notes = notesData.sort((a, b) => 0.5 - Math.random());
         utilService.saveToStorage(NOTES_STORAGE_KEY, notes)
     }
     return notes
