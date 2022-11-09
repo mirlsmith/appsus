@@ -1,5 +1,7 @@
 import { mailService } from "../apps/mail/services/mail.service.js"
 
+import mailList from '../apps/mail/cmps/mail-list.cmp.js'
+
 export default {
     template: `
         <section class="mail-page">
@@ -15,18 +17,37 @@ export default {
             </header>
 
             <section class="mail-container">
-                <h1>Mail</h1>
-
+                <mail-list :mails="mailsToShow"/>
 
             </section>
             
             <!-- <router-link to="/mail/details">details</router-link> -->
-            <router-view></router-view>
+            <!-- <router-view></router-view> -->
         </section>
     `,
+    data(){
+        return {
+            mails: [],
+            filterBy: {
+
+            }
+        }
+    },
+    computed: {
+        mailsToShow(){
+            return this.mails
+        }
+    },
+    created() {
+        mailService.query()
+            .then(mails => {
+                this.mails = mails
+            })
+    },
 
     components: {
         mailService,
+        mailList
     }
 }
 
