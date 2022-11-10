@@ -26,6 +26,11 @@
     color: solid var(--clr5);
 }
 
+/* cursor helper */
+.clk {
+    cursor: pointer;
+}
+
 /* list helpers */
 
 .clean-list {

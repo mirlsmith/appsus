@@ -60,7 +60,7 @@
 
 @media(max-width: 720px) {
   .app-header {
-    background-color: var(--clr3);
-    color: var(--secondary-clr2);
+    /* background-color: var(--clr3);
+    color: var(--secondary-clr2); */
   }
 }

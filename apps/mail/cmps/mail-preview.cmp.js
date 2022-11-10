@@ -1,9 +1,9 @@
 export default {
     props: ['mail'],
     template: `
-        <article  class="mail-preview">
-            <div>
-            <i class="fa-regular fa-star"></i>
+        <article  class="mail-preview clk">
+            <div class="star-icon">
+                <i class="fa-regular fa-star clk"></i>
             </div>
             <h3 class="from">{{ mail.from }}</h3>
             <div class="subject-body">

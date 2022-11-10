@@ -2,37 +2,23 @@
     height: 100%;
     width: 160px;
     position: fixed;
-    top: 80px;
+    top: 85px;
     left: 0;
-    background-color: #ddf0e4;
+    background-color: var(--clr2);
     overflow-x: hidden;
     padding-top: 20px;
     z-index: 1;
 
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 10px;
     padding-left: 25px;
 }
 
-/* .mail-header {
-    width: 100%;
-    padding: 20px;
-
-    background-color: #ddf0e4 ;
-    position: fixed;
-    top: 80px;
-    overflow: hidden;
+.mail-sidenav .compose-btn {
+    background-color: var(----secondary-clr2);
 }
-
-.mail-header input[type=search] {
-    width: 60%;
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-} */
 
 .mail-container {
     margin-left: 160px;
@@ -81,6 +67,10 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.mail-preview .star-icon {
+    min-width: 20px;
 }
 
 .mail-details {

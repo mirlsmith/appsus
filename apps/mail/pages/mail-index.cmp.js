@@ -32,7 +32,6 @@ export default {
             }
         },
         setTextFilter(searchText) {
-            //TO DO 
             this.filterBy.text = searchText
         }
     },
@@ -41,17 +40,11 @@ export default {
             return this.$route.params.filterBy
         },
         mailsToShow(){
-            // console.log('searching by text', this.filterBy.text);
             const regex = new RegExp(this.filterBy.text, 'i')
-            // console.log('all mails', this.mails);
             let mails = this.mails.filter(this.filterByType)
             mails = mails.filter((mail) => {
-                // console.log('subject:', mail.subject )
                 return regex.test(mail.subject)
             }) 
-            //TODO filter by text 
-            
-            // console.log('mails to show', mails);
             return mails
         }
     },
@@ -59,15 +52,12 @@ export default {
         mailService.query()
             .then(mails => {
                 this.mails = mails
-                // console.log('i was created', 'filter type is', this.filterType);
             })
     
     },
     watch: {
         filterType() {
-            // console.log('filter is now', this.filterType);
             this.filterBy.type = this.filterType
-            // console.log('filter for mails is now', this.filterBy);
         }
     },
 

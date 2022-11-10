@@ -6,7 +6,7 @@ export default {
     template: `
         <section class="mail-page">
             <nav class="mail-sidenav">
-                <button>Compose</button>
+                <button class="compose-btn">Compose</button>
                 <router-link to="/mail/index/inbox">Inbox</router-link>
                 <router-link to="/mail/index/starred">Starred</router-link>
                 <router-link to="/mail/index/sent">Sent Mail</router-link>
@@ -16,7 +16,7 @@ export default {
             <!-- <header class="mail-header">
                 <input type="search" placeholder="Search" />
             </header> -->
-            
+
             <router-view></router-view>
 
         </section>
