@@ -1,26 +1,47 @@
 .keep-page {
   margin-top: 25px;
   display: grid;
-  grid-template-columns: 50px auto;
+  grid-template-columns: auto;
+  margin-inline-start: 161px;
+}
+
+.keep-page .search-bar {
+  margin-left: 0;
+}
+
+.keep-page .side-nav {
+  text-align: center;
+  font-size: 24px;
+  align-items: center;
+}
+
+.keep-page .side-nav a {
+  border-radius: 50%;
+  padding: 10px;
+  transition: .3s;
+}
+
+.keep-page .side-nav a.router-link-exact-active {
+  background-color: #d8d8d8;
+  color: orange;
+}
+
+.keep-page .side-nav a:hover {
+  background-color: #d8d8d8;
+  color: orange;
 }
 
 .keep-page .notes-container {
   margin-block-start: 50px;
-}
-
-.keep-page .note-filters {
-  width: max-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  gap: 10px;
-  font-size: 36px;
+  padding-inline: 20px;
 }
 
 .note-list {
   columns: auto 5;
   gap: 10px;
 }
+
+/* NOTE-PREVIEW */
 
 .note-preview {
   background-color: var(--clr2);

@@ -6,3 +6,19 @@
   max-width: 1440px;
   margin-inline: auto;
 }
+
+.side-nav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  top: 85px;
+  left: 0;
+  background-color: var(--clr2);
+  overflow-x: hidden;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding-left: 25px;
+}
