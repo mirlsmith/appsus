@@ -7,7 +7,7 @@ export default {
     template: `
         <section class="mail-page">
             <nav class="mail-sidenav">
-                <button class="compose-btn blue-mail-btn">Compose</button>
+                <button @click="isMailCompose=true" class="compose-btn blue-mail-btn">Compose</button>
                 <router-link to="/mail/index/inbox">Inbox</router-link>
                 <router-link to="/mail/index/starred">Starred</router-link>
                 <router-link to="/mail/index/sent">Sent Mail</router-link>
@@ -21,15 +21,28 @@ export default {
             <router-view></router-view>
 
             
-
-                <mail-compose v-if="isMailCompose"/>
-            
+            <Transition name="custom-classes"
+                enter-active-class="animate__animated animate__fadeInUp animate__faster"
+                leave-active-class="animate__animated animate__fadeOutDown animate__faster">
+            <mail-compose v-if="isMailCompose"
+                @sent="mailSent"
+                @discard="mailDiscard"/>
+            </Transition>
         </section>
     `,
     data(){
         return {
-            isMailCompose: true,
+            isMailCompose: false,
 
+        }
+
+    },
+    methods: {
+        mailSent(mailDetails){
+            this.isMailCompose = false
+        },
+        mailDiscard(){
+            this.isMailCompose = false
         }
 
     },

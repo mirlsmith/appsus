@@ -5,25 +5,37 @@ export default {
                     <span class="new-msg">New Message</span>
                     <button class="close">x</button>
                 </div>
-                <form @submit.stop="mailSent">
+                <form>
                     <input type="text" class="mail-to" placeholder="To"/>
                     <input type="text" class="mail-subject" placeholder="Subject"/>
                     <textarea class="mail-body" cols="30" rows="10"></textarea>
                     <div class="actions">
-                        <button class="mail-send blue-mail-btn">Send</button>
-                        <i class="fa-solid fa-trash-can"></i>
+                        <button @click.stop="mailSent" class="mail-send blue-mail-btn">Send</button>
+                        <i 
+                        @click.stop="mailDiscard"
+                        class="fa-solid fa-trash-can clk" title="discard"></i>
                     </div>
                 </form>
             </section>
     `,
     data() {
         return {
+            mailDetails: {
+
+
+            }
         }
     },
     methods: {
         mailSent(){
             console.log('email was sent');
+            this.$emit('sent', this.mailDetails)
+        },
+        mailDiscard() {
+            this.$emit('discard', this.mailDetails)
+
         }
+
 
     },
 
