@@ -5,10 +5,7 @@ import mailList from '../../mail/cmps/mail-list.cmp.js'
 
 export default {
     template: `
-            <!-- <header class="mail-header"> -->
-                <!-- <input type="search" placeholder="Search" /> -->
-                <search-bar @searched="setTextFilter"/>
-            <!-- </header> -->
+            <search-bar @searched="setTextFilter"/>
             <section class="mail-container">
                 <mail-list :mails="mailsToShow"/>
             </section>
@@ -28,16 +25,15 @@ export default {
            
             if (mail.isRemoved) return (filterType === 'trash')
             else {
-                // if (filterType === 'inbox') return (mail.to === mailService.getUser().email && !mail.isRemoved)
                 if (filterType === 'inbox') return (mail.to === mailService.getUser().email)
                 if (filterType === 'starred') return mail.isStarred
-                // if (filterType === 'sent') return (mail.from === mailService.getUser().email && !mail.isRemoved)
                 if (filterType === 'sent') return (mail.from === mailService.getUser().email)
                 if (filterType === 'drafts') return mail.isDraft
             }
         },
         setTextFilter(searchText) {
             //TO DO 
+            this.filterBy.text = searchText
         }
     },
     computed: {
@@ -45,9 +41,15 @@ export default {
             return this.$route.params.filterBy
         },
         mailsToShow(){
+            // console.log('searching by text', this.filterBy.text);
+            const regex = new RegExp(this.filterBy.text, 'i')
             // console.log('all mails', this.mails);
-            var mails //TODO filter by text 
-            mails = this.mails.filter(this.filterByType)
+            let mails = this.mails.filter(this.filterByType)
+            mails = mails.filter((mail) => {
+                // console.log('subject:', mail.subject )
+                return regex.test(mail.subject)
+            }) 
+            //TODO filter by text 
             
             // console.log('mails to show', mails);
             return mails
