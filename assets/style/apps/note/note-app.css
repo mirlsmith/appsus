@@ -4,6 +4,10 @@
   grid-template-columns: 50px auto;
 }
 
+.keep-page .notes-container {
+  margin-block-start: 50px;
+}
+
 .keep-page .note-filters {
   width: max-content;
   display: flex;
@@ -34,6 +38,7 @@
   bottom: 0;
   transform: translateX(-50%);
   opacity: 0;
+  transition: .3s;
 }
 
 .note-preview i.pinned {

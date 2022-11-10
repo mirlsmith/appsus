@@ -2,18 +2,29 @@ import { notesService } from '../apps/keep/services/note.service.js'
 
 import noteList from '../apps/keep/cmps/note-list.cmp.js'
 import noteModal from '../apps/keep/cmps/note-modal.cmp.js'
+import searchBar from '../cmps/search-bar.cmp.js'
 
 const asideLinks = [
     { to: '/keep', faClass: 'fa fa-sticky-note-o' },
     { to: '/keep/text', faClass: 'fa fa-font' },
     { to: '/keep/video', faClass: 'fa fa-video-camera' },
     { to: '/keep/image', faClass: 'fa fa-picture-o' },
-    { to: '/keep/list', faClass: 'fa fa-list' }
+    { to: '/keep/todos', faClass: 'fa fa-list' }
 ]
+
+const gFilterMapKey = {
+    '': '',
+    'text': 'note-txt',
+    'video': 'note-video',
+    'image': 'note-img',
+    'todos': 'note-todos'
+}
 
 export default {
     template: `
         <section class="keep-page">
+
+            <search-bar @searched="setFilterByTxt" />
 
             <aside class="note-filters">
                 <router-link v-for="link in getLinks" :to="link.to" :key="link.label">
@@ -21,8 +32,20 @@ export default {
                 </router-link>
             </aside>
 
-            <div class="container">
-                <note-list :notes="notes"
+            <div class="notes-container">
+                <note-list :notes="pinnedNotesToShow"
+                    enter-class="animate__bounceIn"
+                    leave-class="animate__bounceOut"
+                    @onNoteClick="handleNoteSelection"
+                    @onNotePinned="handleNotePinned"
+                    @onNoteRemove="handleNoteRemove"
+                    @onNoteDuplicate="handleNoteDuplicate" />
+
+                <hr>
+
+                <note-list :notes="notesToShow"
+                    enter-class="animate__fadeInDown"
+                    leave-class="animate__backOutDown"
                     @onNoteClick="handleNoteSelection"
                     @onNotePinned="handleNotePinned"
                     @onNoteRemove="handleNoteRemove"
@@ -46,14 +69,30 @@ export default {
     data() {
         return {
             notes: [],
+            pinnedNotes: [],
             selectedNote: null,
-            isNoteModalOpen: false
+            isNoteModalOpen: false,
+            filter: {
+                type: '',
+                txt: ''
+            }
+        }
+    },
+    watch: {
+        getFilter(filter) {
+            this.filter.type = gFilterMapKey[filter] || ''
         }
     },
     methods: {
+        setFilterByTxt(txt) {
+            this.filter.txt = txt
+        },
         loadNotes() {
             notesService.query()
-                .then(notes => this.notes = notes)
+                .then(notes => {
+                    this.pinnedNotes = notes.filter(note => note.isPinned) // Pinned notes
+                    this.notes = notes.filter(note => !note.isPinned) // Others
+                })
         },
         handleNoteSelection(note) {
             this.selectedNote = note
@@ -70,12 +109,26 @@ export default {
         }
     },
     computed: {
+        notesToShow() {
+            if (!this.filter.type) return this.notes
+            const regex = new RegExp(this.filter.txt, 'i')
+            return this.notes.filter(note => note.type === this.filter.type && regex.test(note.info.title))
+        },
+        pinnedNotesToShow() {
+            const regex = new RegExp(this.filter.txt, 'i')
+
+            return this.pinnedNotes.filter(note => note.type === this.filter.type)
+        },
+        getFilter() {
+            return this.$route.params.filterBy
+        },
         getLinks() {
             return asideLinks
         }
     },
     components: {
         noteList,
-        noteModal
+        noteModal,
+        searchBar
     }
 }

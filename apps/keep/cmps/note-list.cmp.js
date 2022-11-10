@@ -2,12 +2,12 @@
 import notePreview from './note-preview.cmp.js'
 
 export default {
-  props: ['notes'],
+  props: ['notes', 'enterClass', 'leaveClass'],
   template: `
     <section class="note-list">
       <TransitionGroup name="custom-classes"
-        enter-active-class="animate__animated animate__fadeInDown"
-        leave-active-class="animate__animated animate__backOutDown">
+        :enter-active-class="'animate__animated ' + enterClass"
+        :leave-active-class="'animate__animated ' + leaveClass">
 
         <note-preview
           v-for="note in notes"
