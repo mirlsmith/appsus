@@ -1,8 +1,9 @@
 import { notesService } from '../apps/keep/services/note.service.js'
 
+import searchBar from '../cmps/search-bar.cmp.js'
 import noteList from '../apps/keep/cmps/note-list.cmp.js'
 import noteModal from '../apps/keep/cmps/note-modal.cmp.js'
-import searchBar from '../cmps/search-bar.cmp.js'
+import noteAdd from '../apps/keep/cmps/note.add.cmp.js'
 
 const asideLinks = [
     { to: '/keep', faClass: 'fa fa-sticky-note-o', title: 'Keep' },
@@ -33,7 +34,8 @@ export default {
             </aside>
 
             <div class="notes-container">
-
+                <note-add @onSubmit="handleNoteAdded" />
+                
                 <p v-if="pinnedNotesToShow.length > 0">PINNED</p>
                 <note-list :notes="pinnedNotesToShow"
                     enter-class="animate__bounceIn"
@@ -96,6 +98,9 @@ export default {
                     this.notes = notes.filter(note => !note.isPinned) // Others
                 })
         },
+        handleNoteAdded(note) {
+            console.log('TO-DO: Add', note);
+        },
         handleNoteSelection(note) {
             this.selectedNote = note
             this.isNoteModalOpen = true
@@ -131,6 +136,7 @@ export default {
     components: {
         noteList,
         noteModal,
-        searchBar
+        searchBar,
+        noteAdd
     }
 }
