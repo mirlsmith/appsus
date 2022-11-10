@@ -1,9 +1,14 @@
 import { mailService } from "../services/mail.service.js"
 
+import searchBar from "../../../cmps/search-bar.cmp.js"
 import mailList from '../../mail/cmps/mail-list.cmp.js'
 
 export default {
     template: `
+            <!-- <header class="mail-header"> -->
+                <!-- <input type="search" placeholder="Search" /> -->
+                <search-bar @searched="setTextFilter"/>
+            <!-- </header> -->
             <section class="mail-container">
                 <mail-list :mails="mailsToShow"/>
             </section>
@@ -23,11 +28,16 @@ export default {
            
             if (mail.isRemoved) return (filterType === 'trash')
             else {
-                if (filterType === 'inbox') return (mail.to === mailService.getUser().email && !mail.isRemoved)
+                // if (filterType === 'inbox') return (mail.to === mailService.getUser().email && !mail.isRemoved)
+                if (filterType === 'inbox') return (mail.to === mailService.getUser().email)
                 if (filterType === 'starred') return mail.isStarred
-                if (filterType === 'sent') return (mail.from === mailService.getUser().email && !mail.isRemoved)
+                // if (filterType === 'sent') return (mail.from === mailService.getUser().email && !mail.isRemoved)
+                if (filterType === 'sent') return (mail.from === mailService.getUser().email)
                 if (filterType === 'drafts') return mail.isDraft
             }
+        },
+        setTextFilter(searchText) {
+            //TO DO 
         }
     },
     computed: {
@@ -61,6 +71,7 @@ export default {
 
     components: {
         mailService,
-        mailList
+        mailList,
+        searchBar
     }
 }

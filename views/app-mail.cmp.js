@@ -13,15 +13,10 @@ export default {
                 <router-link to="/mail/index/drafts">Drafts</router-link>
                 <router-link to="/mail/index/trash">Trash</router-link>
             </nav>
-            <header class="mail-header">
+            <!-- <header class="mail-header">
                 <input type="search" placeholder="Search" />
-            </header>
-
-            <!-- <section class="mail-container">
-                <mail-list :mails="mailsToShow"/>
-            </section> -->
+            </header> -->
             
-            <!-- <router-link to="/mail/details">details</router-link> -->
             <router-view></router-view>
 
         </section>
