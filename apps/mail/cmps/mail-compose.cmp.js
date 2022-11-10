@@ -26,13 +26,17 @@ export default {
             }
         }
     },
+    created(){
+        //todo start settimeout every 5 sec to save mail as draft
+    },
     methods: {
         mailSent(){
-            console.log('email was sent');
             this.$emit('sent', this.mailDetails)
+            //clear timeout
         },
         mailDiscard() {
             this.$emit('discard', this.mailDetails)
+            //clear timeout
 
         }
 

@@ -6,11 +6,11 @@ import mailCompose from '../apps/mail/cmps/mail-compose.cmp.js'
 export default {
     template: `
         <section class="mail-page">
-            <nav class="mail-sidenav">
+            <nav class="side-nav">
                 <button @click="isMailCompose=true" class="compose-btn blue-mail-btn">Compose</button>
                 <router-link to="/mail/index/inbox">Inbox</router-link>
                 <router-link to="/mail/index/starred">Starred</router-link>
-                <router-link to="/mail/index/sent">Sent Mail</router-link>
+                <router-link to="/mail/index/sent">Sent</router-link>
                 <router-link to="/mail/index/drafts">Drafts</router-link>
                 <router-link to="/mail/index/trash">Trash</router-link>
             </nav>
@@ -40,9 +40,11 @@ export default {
     methods: {
         mailSent(mailDetails){
             this.isMailCompose = false
+            console.log('mail sent');
         },
         mailDiscard(){
             this.isMailCompose = false
+            console.log('mail discarded');
         }
 
     },

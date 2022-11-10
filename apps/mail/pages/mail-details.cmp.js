@@ -6,21 +6,15 @@ export default {
           <section class="mail-actions">
           <i 
             @click="goBack()"
-            class="fa-solid fa-arrow-left"></i>
+            class="fa-solid fa-arrow-left clk"></i>
           <i
             @click="removeMail()" 
-            class="fa-solid fa-trash-can"></i>
+            class="fa-solid fa-trash-can clk"></i>
           </section>
-          <!-- <p>{{mail}}</p> -->
           <h1>{{mail.subject}}</h1>
           <h4>{{mail.from}}</h4>
           <h4>{{formattedDate}}</h4>
           <p>{{mail.body}}</p>
-
-          <hr />
-          <p>{{mail}}</p>
-
-
         </section>
             
       `,
