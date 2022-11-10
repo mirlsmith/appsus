@@ -5,20 +5,15 @@ export default {
             <div class="search-container">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input
-                    @change="onSearched" 
-                    v-model.trim.lazy="searchText"
+                    @input="onSearched"
                     type="search" placeholder="Search" />
             </div>
         </section>
     `,
-    data() {
-        return {
-            searchText: ''
-        }
-    },
     methods: {
-        onSearched(){
-            this.$emit('searched', this.searchText)
+        onSearched(ev){
+            const value = ev.target.value.trim()
+            this.$emit('searched', value)
         }
-    },
+    }
 }
