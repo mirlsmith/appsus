@@ -1,9 +1,9 @@
 const navLinks = [
-    { to: '/', label: 'Home', src: '../assets/img/home.png' },
-    { to: '/mail/index/inbox', label: 'Mail', src: '../assets/img/gmail.png' },
-    { to: '/keep', label: 'Keep', src: '../assets/img/keep.png' },
+    { to: '/', label: 'Home', src: 'assets/img/home.png' },
+    { to: '/mail/index/inbox', label: 'Mail', src: 'assets/img/gmail.png' },
+    { to: '/keep', label: 'Keep', src: 'assets/img/keep.png' },
     // { to: '/books', label: 'Books' },
-    { to: '/about', label: 'About', src: '../assets/img/about.png' }
+    { to: '/about', label: 'About', src: 'assets/img/about.png' }
 ]
 
 export default {
