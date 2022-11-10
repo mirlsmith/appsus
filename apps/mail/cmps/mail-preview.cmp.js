@@ -2,14 +2,10 @@ export default {
     props: ['mail'],
     template: `
         <article  class="mail-preview clk">
-            <div class="star-icon">
-                <i class="fa-regular fa-star clk"></i>
-            </div>
+            <i class="fa-regular fa-star clk"></i>
             <h3 class="from">{{ mail.from }}</h3>
-            <div class="subject-body">
-                <h3 class="subject">{{ mail.subject }} - </h3>
-                <span class="body">{{mail.body}}</span>
-            </div>
+            <h3 class="subject">{{ mail.subject }} - </h3>
+            <p class="body">{{mail.body}}</p>
             <span class="date">{{ formattedDate }}</span>
         </article>
     `,
