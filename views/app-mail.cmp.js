@@ -1,12 +1,13 @@
 // import { mailService } from "../apps/mail/services/mail.service.js"
 
 // import mailList from '../apps/mail/cmps/mail-list.cmp.js'
+import mailCompose from '../apps/mail/cmps/mail-compose.cmp.js'
 
 export default {
     template: `
         <section class="mail-page">
             <nav class="mail-sidenav">
-                <button class="compose-btn">Compose</button>
+                <button class="compose-btn blue-mail-btn">Compose</button>
                 <router-link to="/mail/index/inbox">Inbox</router-link>
                 <router-link to="/mail/index/starred">Starred</router-link>
                 <router-link to="/mail/index/sent">Sent Mail</router-link>
@@ -19,17 +20,19 @@ export default {
 
             <router-view></router-view>
 
+            
+
+                <mail-compose v-if="isMailCompose"/>
+            
         </section>
     `,
-    // data(){
-    //     return {
-    //         mails: [],
-    //         filterBy: {
+    data(){
+        return {
+            isMailCompose: true,
 
-    //         },
+        }
 
-    //     }
-    // },
+    },
     // computed: {
     //     mailsToShow(){
     //         return this.mails
@@ -42,9 +45,8 @@ export default {
     //         })
     // },
 
-    // components: {
-    //     mailService,
-    //     mailList
-    // }
+    components: {
+        mailCompose
+    }
 }
 

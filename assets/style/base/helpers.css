@@ -31,6 +31,16 @@
     cursor: pointer;
 }
 
+/* button helper */
+.blue-mail-btn {
+    background-color: var(--secondary-clr2);
+    font-size: 1em;
+    padding: 5px 20px 5px 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px;
+}
+
 /* list helpers */
 
 .clean-list {

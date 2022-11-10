@@ -16,4 +16,5 @@
 
 /* Apps */
 @import 'apps/mail/mail-app.css';
+@import './apps/mail/mail-compose.css';
 @import 'apps/note/note-app.css';

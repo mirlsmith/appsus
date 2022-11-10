@@ -1,0 +1,69 @@
+
+.mail-compose {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    position: fixed;
+    bottom: 0;
+    right: 80px;
+    /* border: 1px solid; */
+    /* border-bottom: none; */
+    box-shadow: 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%), 0px 5px 5px -3px rgb(0 0 0 / 20%);
+	border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.mail-compose .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr4);
+    color: var(--clr1);
+    padding: 3px, 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.mail-compose .new-msg {
+    padding-left: 20px;
+}
+
+.mail-compose .close {
+    border: none;
+    background: var(--clr4);
+    font-size: 1.5em;
+}
+
+.mail-compose form {
+    display: flex;
+    flex-direction: column;
+}
+
+.mail-compose form input {
+    border: none;
+    box-shadow: inset 0 -1px 0 0 rgb(100 121 143 / 12%);
+    outline: none;
+}
+
+.mail-compose .mail-body {
+        height: 270px;
+        border: none;
+        outline: none;
+        
+        overflow: auto;
+        resize: none;
+        font-family: roboto;
+        font-size: 1em;
+}
+
+.mail-compose .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+.mail-compose .actions .fa-trash-can {
+    font-size: 1.5em;
+}
