@@ -8,7 +8,7 @@ const navLinks = [
 
 export default {
 	template: `
-        <header class="app-header main-layout full">
+        <header class="app-header full">
             <nav class="main-nav">
                 <router-link to="/">
                     <img src="../assets/img/home.png" alt="App Icon">
