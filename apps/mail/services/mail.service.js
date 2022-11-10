@@ -16,7 +16,8 @@ export const mailService = {
     query,
     get,
     remove,
-    save
+    save,
+    getUser
 }
 
 function query() {
@@ -35,6 +36,10 @@ function save(mail) {
     if (mail.id) return storageService.put(MAILS_KEY, mail) //utilize for DRAFT feature?
     else 
     return storageService.post(MAILS_KEY, mail)
+}
+
+function getUser() {
+    return loggedInUser
 }
 
 

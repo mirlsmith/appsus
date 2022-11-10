@@ -38,7 +38,8 @@ export default {
     },
     methods: {
       goBack() {
-        this.$router.push(`/mail/index`)
+        // this.$router.push(`/mail/index`)
+        this.$router.go(-1)
       },
       removeMail() {
         // console.log('removed status before remove', this.mail.isRemoved);

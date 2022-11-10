@@ -12,10 +12,22 @@ export default {
         return {
             mails: [],
             filterBy: {
-                type: 'inbox',
-                word: ''
+                type: this.filterType,
+                text: ''
             },
-
+        }
+    },
+    methods: {
+        filterByType(mail) {
+            const filterType = this.filterBy.type || this.filterType
+           
+            if (mail.isRemoved) return (filterType === 'trash')
+            else {
+                if (filterType === 'inbox') return (mail.to === mailService.getUser().email && !mail.isRemoved)
+                if (filterType === 'starred') return mail.isStarred
+                if (filterType === 'sent') return (mail.from === mailService.getUser().email && !mail.isRemoved)
+                if (filterType === 'drafts') return mail.isDraft
+            }
         }
     },
     computed: {
@@ -23,21 +35,27 @@ export default {
             return this.$route.params.filterBy
         },
         mailsToShow(){
-            //I AM HERE
-            return this.mails
+            // console.log('all mails', this.mails);
+            var mails //TODO filter by text 
+            mails = this.mails.filter(this.filterByType)
+            
+            // console.log('mails to show', mails);
+            return mails
         }
     },
     created() {
         mailService.query()
             .then(mails => {
                 this.mails = mails
+                // console.log('i was created', 'filter type is', this.filterType);
             })
+    
     },
     watch: {
         filterType() {
-            console.log('filter is now', this.filterType);
+            // console.log('filter is now', this.filterType);
             this.filterBy.type = this.filterType
-            console.log('filter for mails is now', this.filterBy);
+            // console.log('filter for mails is now', this.filterBy);
         }
     },
 
