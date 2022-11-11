@@ -7,7 +7,7 @@
         "sentTimeStamp": 1665054314,
         "body": "For self-gifting or to surprise the book lover in your life, we've been through all the books published this year and selected the best gift ideas.        From a bestselling cookbook to a must-read memoir, discover the full lists of books that are great book gifts to give in 2022.",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["",""]
     },
@@ -19,7 +19,7 @@
         "sentTimeStamp": 1616959394,
         "body": "Your feedback means the world to us Hi Eyal, From all of us here at United, thank you for flying with us! It was a pleasure having you onboard for your trip from Newark to Tel Aviv. We would like to hear about your experience, as your input helps us find new ways to innovate, improve and recognize our employees for their great service.",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work"," "]
     },
@@ -31,7 +31,7 @@
         "sentTimeStamp": 1659262514,
         "body": "Hope you're having a wonderful day! Have a very happy birthday! Can't wait to see you soon!!!",
         "isStarred": true,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isRead": true,
         "labels": ["friends",""]
     },
@@ -43,7 +43,7 @@
         "sentTimeStamp": 1516252514,
         "body": "Here are your fligt details. Have a great trip!",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work"," "]
     },
@@ -55,7 +55,7 @@
         "sentTimeStamp": 1571076914,
         "body": "Hope all is well with you. There are some changes that may be happening with the company in the near future and we'd like to discuss some matters with you. Can we set up a zoom meeting for Wednesday sometime after 14:00? Thank you very much!",
         "isStarred": true,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isRead": true,
         "labels": ["work","important"]
     },
@@ -67,7 +67,7 @@
         "sentTimeStamp": 1600928114,
         "body": "We wanted to let you know of an upcoming price change to your Disney+ subscription. Effective on December 10, 2022, your subscription will now be called the Disney+ Premium plan and will change in price to $10.99 per month. Your payment method on file will be charged unless you cancel your subscription before December 10, 2022.",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["important"," "]
     },
@@ -79,7 +79,7 @@
         "sentTimeStamp": 1604932260,
         "body": "The Amazon Price for Fire TV Stick Lite with Alexa Voice Remote Lite (no TV controls), HD streaming device has dropped at Amazon and is now $12.00 below your desired price. Additionally, our system has determined that the current price is the best price as it is the lowest price we've seen on this product.",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["orders",""]
     },
@@ -91,7 +91,7 @@
         "sentTimeStamp": 1624627860,
         "body": "Cancellation confirmation! Your membership has ended. To reactivate it, please contact Customer Support. In the meantime, your account has reverted to a basic, free level of membership. Free memberships retain limited access to Creative Cloud services and 2GB of complimentary online storage. (You may need to delete files to meet your new storage limitations.) Keep exploring Creative Cloud, and we wish you well in your future endeavors.",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work","orders"]
     },
@@ -103,7 +103,7 @@
         "sentTimeStamp": 1643121060,
         "body": "We'll soon sunset Universal Analytics On July 1, 2023, Universal Analytics will stop processing new hits. If you still rely on Universal Analytics, we urge you to prepare for the future by moving over to Google Analytics 4, our next-generation measurement solution.",
         "isStarred": false,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isRead": true,
         "labels": ["work",""]
     },
@@ -115,7 +115,7 @@
         "sentTimeStamp": 1516252514,
         "body": "Dear Miriam,\nPlease see attached.\nI need you and Micah to review, print the 2 authorizations, and return to me at your earliest convenience.\nRivka:\nIncluded in interest income is $62 from the IRS (US treasury).  It is interest on a refund.  I understand that many Israeli accountants do not include it as taxable income.\nUS Dividends:  $8536 Foreign tax paid $162.  Other tax on return is irrelevant to Israel.\nCapital gains Vanguard short term $371, long term $1004 and capital gains distributions $516\nOther income amounts are unrelated to Israel.  They include Gilti income and contributions to kupot pensya, etc\nPlease send me the שומה צפויה  at your earliest convenience so that I can finalize.  The IRS is shutting down efiling services next week.\nI hope that the above is helpful.  Let me know if you have any questions.\nThanks,\nChanie",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work"," "]
     },
@@ -127,7 +127,7 @@
         "sentTimeStamp": 1551796260,
         "body": "FREE SHIPPING on $25+ USA orders \nEARRINGS\nRINGS\nBRACELETS\nNECKLACES\nNEW\nGET 10% OFF WITH CODE: THANKS\nNew Arrivals",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["work","important"]
     },
@@ -139,7 +139,7 @@
         "sentTimeStamp": 1667286446,
         "body": "Please find the invoice attached.\nThank you,\nMerah Geshi",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work"," "]
     },
@@ -151,7 +151,7 @@
         "sentTimeStamp": 1665054314,
         "body": "Hi Miriam, Tifara here - Thank you much for contacting Storyblocks! I am sorry to hear that you are interested in cancelling and refunding your Storyblocks subscription.\nWe'd love to keep you as a customer if possible, so I'd like to offer you a full year of access at no additional cost. We would extend your access through September 1, 2024, at which point your account would cancel.\nAlternatively, I would be happy to offer a refund for the most recent charge to your account if you no longer need access to your subscription.\n Please let me know which of these options you would prefer. In the meantime, I have ensured automatic renewal is turned off for your account.\n Looking forward to your reply!",
         "isStarred": false,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isDraft": true,
         "isRead": false,
         "labels": ["friends",""]
@@ -164,7 +164,7 @@
         "sentTimeStamp": 1616959394,
         "body": "Please turn on images to shop. 60% off bed & bath; 50% off everything else:\n Simply click any link in this e-mail and the Promotion Code and PIN will automatically be applied to your order. Or at checkout, manually enter the Promotion Code COMFY and PIN 1234.\n Receive 60% off bed & bath; 50% off everything else online, in-store or by phone (excludes buy more and save pricing, monogramming, gift boxing, gift cards, shipping, taxes, duties, Lands' End Business Outfitters purchases, and excluded items as marked). Discount will be applied at checkout. This offer has no cash value. Promotional savings may be deducted from returns. 5-7 business day delivery to most addresses. Free standard shipping is valid on orders of $99 or more (after promotions and discounts are applied) shipped to US and Canada addresses only. Offer valid through 11:59 p.m. Central, November 10, 2022. Not valid on previous purchases or when combined with any other promotional offers.\n 1 Subject to credit approval. Offer is exclusive to Lands’ End® Visa® credit card holders enrolled in the Lands’ End® Credit Card Rewards program. Lands’ End purchases shipped outside of the U.S. and all other retailers that sell Lands’ End merchandise only earn 1 point per $1. This rewards program is provided by Lands’ End, and its terms may change at any time. For full Rewards Terms and Conditions, please see comenity.net/landsendvisa or comenity.net/landsendcard.\n Lands’ End Visa® Credit Card Accounts are issued by Comenity Capital Bank pursuant to a license from Visa U.S.A. Inc. Visa is a registered trademark of Visa International Service Association and used under license.\n",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work"," "]
     },
@@ -176,7 +176,7 @@
         "sentTimeStamp": 1659262514,
         "body": "Joji\n SMITHEREENS OBLIVION\n with rei brown, Lil Toe (Ammo) & SavageRealm\n May 13, 2023\n Presale:\n Thursday, November 10 from 10AM to 10PM\n Use Code: INGLEWOOD (ONLINE ONLY)\n Get Tickets\n On Sale: Friday, November 11 at 10AM",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["fun",""]
     },
@@ -188,7 +188,7 @@
         "sentTimeStamp": 1525154846,
         "body": "You used to see this all the time.\nDrumming greats like Buddy Rich and Gene Krupa would face off in the ultimate drummer’s showdown: the drum battle.\n But drum battles have become rare… too rare. \n So today I’m excited to share a battle between the NEXT generation of drumming legends.\n Greyson Nekrutman & Brandon Toews went head-to-head in an epic drumming showdown that pays homage to the golden age of drumming.\n Click here to watch them trade furious licks in today’s NEW video:\n No two drummers are alike.\n And one thing I’ve always loved about drumming is how everybody approaches it differently – drums, cymbals, sticks, tuning… everything is unique to the individual drummer. And that’s why you should never compare yourself to anyone else.\n The most powerful thing you can do as a drummer is harness your own identity. \n It’s good to pull inspiration from others, but your ultimate goal should be to find your own voice on the kit. \n That’s what all the practicing, studying, and listening is for.\n Drumeo’s goal has always been to help more people find their voice on the drums – and there’s something HUGE coming at the end of the month to make that easier than ever.\n Stay tuned.\n To Your Drumming Success,\n- Jared Falk",
         "isStarred": false,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isRead": true,
         "labels": ["fun",""]
     },
@@ -200,7 +200,7 @@
         "sentTimeStamp": 1571076914,
         "body": "Hope all is well with you. There are some changes that may be happening with the company in the near future and we'd like to discuss some matters with you. Can we set up a zoom meeting for Wednesday sometime after 14:00? Thank you very much!",
         "isStarred": true,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isRead": true,
         "labels": ["work","important"]
     },
@@ -212,7 +212,7 @@
         "sentTimeStamp": 1600928114,
         "body": "We wanted to let you know of an upcoming price change to your Disney+ subscription. Effective on December 10, 2022, your subscription will now be called the Disney+ Premium plan and will change in price to $10.99 per month. Your payment method on file will be charged unless you cancel your subscription before December 10, 2022.",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["important"," "]
     },
@@ -224,7 +224,7 @@
         "sentTimeStamp": 1604932260,
         "body": "The Amazon Price for Fire TV Stick Lite with Alexa Voice Remote Lite (no TV controls), HD streaming device has dropped at Amazon and is now $12.00 below your desired price. Additionally, our system has determined that the current price is the best price as it is the lowest price we've seen on this product.",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["orders",""]
     },
@@ -236,7 +236,7 @@
         "sentTimeStamp": 1624627860,
         "body": "Cancellation confirmation! Your membership has ended. To reactivate it, please contact Customer Support. In the meantime, your account has reverted to a basic, free level of membership. Free memberships retain limited access to Creative Cloud services and 2GB of complimentary online storage. (You may need to delete files to meet your new storage limitations.) Keep exploring Creative Cloud, and we wish you well in your future endeavors.",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work","orders"]
     },
@@ -248,7 +248,7 @@
         "sentTimeStamp": 1643121060,
         "body": "We'll soon sunset Universal Analytics On July 1, 2023, Universal Analytics will stop processing new hits. If you still rely on Universal Analytics, we urge you to prepare for the future by moving over to Google Analytics 4, our next-generation measurement solution.",
         "isStarred": false,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isRead": true,
         "labels": ["work",""]
     },
@@ -260,7 +260,7 @@
         "sentTimeStamp": 1516252514,
         "body": "You have until midnight EDT tonight to make your selection!\n The book you pick today will arrive in about six weeks. If you selected a book last month, it will be arriving soon, so keep your eye on your mailbox.",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isDraft": true,
         "isRead": true,
         "labels": ["work"," "]
@@ -273,7 +273,7 @@
         "sentTimeStamp": 1551796260,
         "body": "FREE SHIPPING on $25+ USA orders \nEARRINGS\nRINGS\nBRACELETS\nNECKLACES\nNEW\nGET 10% OFF WITH CODE: THANKS\nNew Arrivals",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["work","important"]
     },
@@ -286,7 +286,7 @@
         "body": "Please find the invoice attached.\nThank you,\nMerah Geshi",
         "isStarred": false,
         "isDraft": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work"," "]
     },
@@ -298,7 +298,7 @@
         "sentTimeStamp": 1665054314,
         "body": "For self-gifting or to surprise the book lover in your life, we've been through all the books published this year and selected the best gift ideas.        From a bestselling cookbook to a must-read memoir, discover the full lists of books that are great book gifts to give in 2022.",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["",""]
     },
@@ -310,7 +310,7 @@
         "sentTimeStamp": 1616959394,
         "body": "Your feedback means the world to us Hi Eyal, From all of us here at United, thank you for flying with us! It was a pleasure having you onboard for your trip from Newark to Tel Aviv. We would like to hear about your experience, as your input helps us find new ways to innovate, improve and recognize our employees for their great service.",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work"," "]
     },
@@ -322,7 +322,7 @@
         "sentTimeStamp": 1659262514,
         "body": "Hope you're having a wonderful day! Have a very happy birthday! Can't wait to see you soon!!!",
         "isStarred": true,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isRead": true,
         "labels": ["friends",""]
     },
@@ -334,7 +334,7 @@
         "sentTimeStamp": 1516252514,
         "body": "Here are your fligt details. Have a great trip!",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work"," "]
     },
@@ -346,7 +346,7 @@
         "sentTimeStamp": 1571076914,
         "body": "Hope all is well with you. There are some changes that may be happening with the company in the near future and we'd like to discuss some matters with you. Can we set up a zoom meeting for Wednesday sometime after 14:00? Thank you very much!",
         "isStarred": true,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isRead": true,
         "labels": ["work","important"]
     },
@@ -358,7 +358,7 @@
         "sentTimeStamp": 1600928114,
         "body": "We wanted to let you know of an upcoming price change to your Disney+ subscription. Effective on December 10, 2022, your subscription will now be called the Disney+ Premium plan and will change in price to $10.99 per month. Your payment method on file will be charged unless you cancel your subscription before December 10, 2022.",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["important"," "]
     },
@@ -370,7 +370,7 @@
         "sentTimeStamp": 1604932260,
         "body": "The Amazon Price for Fire TV Stick Lite with Alexa Voice Remote Lite (no TV controls), HD streaming device has dropped at Amazon and is now $12.00 below your desired price. Additionally, our system has determined that the current price is the best price as it is the lowest price we've seen on this product.",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["orders",""]
     },
@@ -382,7 +382,7 @@
         "sentTimeStamp": 1624627860,
         "body": "Cancellation confirmation! Your membership has ended. To reactivate it, please contact Customer Support. In the meantime, your account has reverted to a basic, free level of membership. Free memberships retain limited access to Creative Cloud services and 2GB of complimentary online storage. (You may need to delete files to meet your new storage limitations.) Keep exploring Creative Cloud, and we wish you well in your future endeavors.",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work","orders"]
     },
@@ -394,7 +394,7 @@
         "sentTimeStamp": 1643121060,
         "body": "We'll soon sunset Universal Analytics On July 1, 2023, Universal Analytics will stop processing new hits. If you still rely on Universal Analytics, we urge you to prepare for the future by moving over to Google Analytics 4, our next-generation measurement solution.",
         "isStarred": false,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isRead": true,
         "labels": ["work",""]
     },
@@ -406,7 +406,7 @@
         "sentTimeStamp": 1516252514,
         "body": "Enter promotion code MASCARAFUN in the promotion-code box at checkout to receive a free trial size, while supplies last, with any merchandise purchase of $25 or more on sephora.com or sephora.ca. One per client. Excludes Buy Online, Pick Up In Store orders. Minimum purchase threshold excludes past purchases, gift cards, gift wrapping, packaging, taxes, shipping & handling charges. Trial size provided “as is” and cannot be substituted by client. Offer has no cash value. Not combinable with other offers, unless otherwise specified. Sephora may modify or cancel offer at any time.",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work"," "]
     },
@@ -418,7 +418,7 @@
         "sentTimeStamp": 1551796260,
         "body": "FREE SHIPPING on $25+ USA orders \nEARRINGS\nRINGS\nBRACELETS\nNECKLACES\nNEW\nGET 10% OFF WITH CODE: THANKS\nNew Arrivals",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["work","important"]
     },
@@ -430,7 +430,7 @@
         "sentTimeStamp": 1667286446,
         "body": "Please find the invoice attached.\nThank you,\nMerah Geshi",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work"," "]
     },
@@ -442,7 +442,7 @@
         "sentTimeStamp": 1665054314,
         "body": "Hi Miriam, Tifara here - Thank you much for contacting Storyblocks! I am sorry to hear that you are interested in cancelling and refunding your Storyblocks subscription.\nWe'd love to keep you as a customer if possible, so I'd like to offer you a full year of access at no additional cost. We would extend your access through September 1, 2024, at which point your account would cancel.\nAlternatively, I would be happy to offer a refund for the most recent charge to your account if you no longer need access to your subscription.\n Please let me know which of these options you would prefer. In the meantime, I have ensured automatic renewal is turned off for your account.\n Looking forward to your reply!",
         "isStarred": false,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isDraft": true,
         "isRead": false,
         "labels": ["friends",""]
@@ -455,7 +455,7 @@
         "sentTimeStamp": 1616959394,
         "body": "Please turn on images to shop. 60% off bed & bath; 50% off everything else:\n Simply click any link in this e-mail and the Promotion Code and PIN will automatically be applied to your order. Or at checkout, manually enter the Promotion Code COMFY and PIN 1234.\n Receive 60% off bed & bath; 50% off everything else online, in-store or by phone (excludes buy more and save pricing, monogramming, gift boxing, gift cards, shipping, taxes, duties, Lands' End Business Outfitters purchases, and excluded items as marked). Discount will be applied at checkout. This offer has no cash value. Promotional savings may be deducted from returns. 5-7 business day delivery to most addresses. Free standard shipping is valid on orders of $99 or more (after promotions and discounts are applied) shipped to US and Canada addresses only. Offer valid through 11:59 p.m. Central, November 10, 2022. Not valid on previous purchases or when combined with any other promotional offers.\n 1 Subject to credit approval. Offer is exclusive to Lands’ End® Visa® credit card holders enrolled in the Lands’ End® Credit Card Rewards program. Lands’ End purchases shipped outside of the U.S. and all other retailers that sell Lands’ End merchandise only earn 1 point per $1. This rewards program is provided by Lands’ End, and its terms may change at any time. For full Rewards Terms and Conditions, please see comenity.net/landsendvisa or comenity.net/landsendcard.\n Lands’ End Visa® Credit Card Accounts are issued by Comenity Capital Bank pursuant to a license from Visa U.S.A. Inc. Visa is a registered trademark of Visa International Service Association and used under license.\n",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work"," "]
     },
@@ -467,7 +467,7 @@
         "sentTimeStamp": 1659262514,
         "body": "Joji\n SMITHEREENS OBLIVION\n with rei brown, Lil Toe (Ammo) & SavageRealm\n May 13, 2023\n Presale:\n Thursday, November 10 from 10AM to 10PM\n Use Code: INGLEWOOD (ONLINE ONLY)\n Get Tickets\n On Sale: Friday, November 11 at 10AM",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["fun",""]
     },
@@ -479,7 +479,7 @@
         "sentTimeStamp": 1525154846,
         "body": "You used to see this all the time.\nDrumming greats like Buddy Rich and Gene Krupa would face off in the ultimate drummer’s showdown: the drum battle.\n But drum battles have become rare… too rare. \n So today I’m excited to share a battle between the NEXT generation of drumming legends.\n Greyson Nekrutman & Brandon Toews went head-to-head in an epic drumming showdown that pays homage to the golden age of drumming.\n Click here to watch them trade furious licks in today’s NEW video:\n No two drummers are alike.\n And one thing I’ve always loved about drumming is how everybody approaches it differently – drums, cymbals, sticks, tuning… everything is unique to the individual drummer. And that’s why you should never compare yourself to anyone else.\n The most powerful thing you can do as a drummer is harness your own identity. \n It’s good to pull inspiration from others, but your ultimate goal should be to find your own voice on the kit. \n That’s what all the practicing, studying, and listening is for.\n Drumeo’s goal has always been to help more people find their voice on the drums – and there’s something HUGE coming at the end of the month to make that easier than ever.\n Stay tuned.\n To Your Drumming Success,\n- Jared Falk",
         "isStarred": true,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isRead": false,
         "labels": ["fun",""]
     },
@@ -491,7 +491,7 @@
         "sentTimeStamp": 1571076914,
         "body": "Hope all is well with you. There are some changes that may be happening with the company in the near future and we'd like to discuss some matters with you. Can we set up a zoom meeting for Wednesday sometime after 14:00? Thank you very much!",
         "isStarred": true,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isRead": true,
         "labels": ["work","important"]
     },
@@ -503,7 +503,7 @@
         "sentTimeStamp": 1600928114,
         "body": "We wanted to let you know of an upcoming price change to your Disney+ subscription. Effective on December 10, 2022, your subscription will now be called the Disney+ Premium plan and will change in price to $10.99 per month. Your payment method on file will be charged unless you cancel your subscription before December 10, 2022.",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["important"," "]
     },
@@ -515,7 +515,7 @@
         "sentTimeStamp": 1604932260,
         "body": "The Amazon Price for Fire TV Stick Lite with Alexa Voice Remote Lite (no TV controls), HD streaming device has dropped at Amazon and is now $12.00 below your desired price. Additionally, our system has determined that the current price is the best price as it is the lowest price we've seen on this product.",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["orders",""]
     },
@@ -527,7 +527,7 @@
         "sentTimeStamp": 1624627860,
         "body": "Cancellation confirmation! Your membership has ended. To reactivate it, please contact Customer Support. In the meantime, your account has reverted to a basic, free level of membership. Free memberships retain limited access to Creative Cloud services and 2GB of complimentary online storage. (You may need to delete files to meet your new storage limitations.) Keep exploring Creative Cloud, and we wish you well in your future endeavors.",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work","orders"]
     },
@@ -539,7 +539,7 @@
         "sentTimeStamp": 1643121060,
         "body": "We'll soon sunset Universal Analytics On July 1, 2023, Universal Analytics will stop processing new hits. If you still rely on Universal Analytics, we urge you to prepare for the future by moving over to Google Analytics 4, our next-generation measurement solution.",
         "isStarred": false,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isRead": true,
         "labels": ["work",""]
     },
@@ -551,7 +551,7 @@
         "sentTimeStamp": 1516252514,
         "body": "If you’d rather not receive future emails of this sort from Amazon Business, please let us know your email preferences.\n Amazon.com, Inc. or its affiliates. All rights reserved. Amazon, Amazon.com and the Amazon.com logo are registered trademarks of Amazon.com, Inc. or its affiliates. Amazon.com, 410 Terry Avenue North, Seattle, WA 98109-5210.",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isDraft": true,
         "isRead": true,
         "labels": ["work"," "]
@@ -564,7 +564,7 @@
         "sentTimeStamp": 1551796260,
         "body": "FREE SHIPPING on $25+ USA orders \nEARRINGS\nRINGS\nBRACELETS\nNECKLACES\nNEW\nGET 10% OFF WITH CODE: THANKS\nNew Arrivals",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["work","important"]
     },
@@ -577,7 +577,7 @@
         "body": "Please find the invoice attached.\nThank you,\nMerah Geshi",
         "isStarred": false,
         "isDraft": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work"," "]
     },
@@ -589,7 +589,7 @@
         "sentTimeStamp": 1624627860,
         "body": "Cancellation confirmation! Your membership has ended. To reactivate it, please contact Customer Support. In the meantime, your account has reverted to a basic, free level of membership. Free memberships retain limited access to Creative Cloud services and 2GB of complimentary online storage. (You may need to delete files to meet your new storage limitations.) Keep exploring Creative Cloud, and we wish you well in your future endeavors.",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work","orders"]
     },
@@ -601,7 +601,7 @@
         "sentTimeStamp": 1643121060,
         "body": "We'll soon sunset Universal Analytics On July 1, 2023, Universal Analytics will stop processing new hits. If you still rely on Universal Analytics, we urge you to prepare for the future by moving over to Google Analytics 4, our next-generation measurement solution.",
         "isStarred": false,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isRead": true,
         "labels": ["work",""]
     },
@@ -613,7 +613,7 @@
         "sentTimeStamp": 1516252514,
         "body": "Dear Miriam,\nPlease see attached.\nI need you and Micah to review, print the 2 authorizations, and return to me at your earliest convenience.\nRivka:\nIncluded in interest income is $62 from the IRS (US treasury).  It is interest on a refund.  I understand that many Israeli accountants do not include it as taxable income.\nUS Dividends:  $8536 Foreign tax paid $162.  Other tax on return is irrelevant to Israel.\nCapital gains Vanguard short term $371, long term $1004 and capital gains distributions $516\nOther income amounts are unrelated to Israel.  They include Gilti income and contributions to kupot pensya, etc\nPlease send me the שומה צפויה  at your earliest convenience so that I can finalize.  The IRS is shutting down efiling services next week.\nI hope that the above is helpful.  Let me know if you have any questions.\nThanks,\nChanie",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isDraft": true,
         "isRead": true,
         "labels": ["work"," "]
@@ -626,7 +626,7 @@
         "sentTimeStamp": 1551796260,
         "body": "FREE SHIPPING on $25+ USA orders \nEARRINGS\nRINGS\nBRACELETS\nNECKLACES\nNEW\nGET 10% OFF WITH CODE: THANKS\nNew Arrivals",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["work","important"]
     },
@@ -639,7 +639,7 @@
         "body": "Please find the invoice attached.\nThank you,\nMerah Geshi",
         "isStarred": false,
         "isDraft": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work"," "]
     },
@@ -651,7 +651,7 @@
         "sentTimeStamp": 1665054314,
         "body": "For self-gifting or to surprise the book lover in your life, we've been through all the books published this year and selected the best gift ideas.        From a bestselling cookbook to a must-read memoir, discover the full lists of books that are great book gifts to give in 2022.",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["",""]
     },
@@ -663,7 +663,7 @@
         "sentTimeStamp": 1616959394,
         "body": "Your feedback means the world to us Hi Eyal, From all of us here at United, thank you for flying with us! It was a pleasure having you onboard for your trip from Newark to Tel Aviv. We would like to hear about your experience, as your input helps us find new ways to innovate, improve and recognize our employees for their great service.",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work"," "]
     },
@@ -675,7 +675,7 @@
         "sentTimeStamp": 1659262514,
         "body": "Hope you're having a wonderful day! Have a very happy birthday! Can't wait to see you soon!!!",
         "isStarred": true,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isRead": true,
         "labels": ["friends",""]
     },
@@ -687,7 +687,7 @@
         "sentTimeStamp": 1516252514,
         "body": "Here are your fligt details. Have a great trip!",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work"," "]
     },
@@ -699,7 +699,7 @@
         "sentTimeStamp": 1571076914,
         "body": "Hope all is well with you. There are some changes that may be happening with the company in the near future and we'd like to discuss some matters with you. Can we set up a zoom meeting for Wednesday sometime after 14:00? Thank you very much!",
         "isStarred": true,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isRead": true,
         "labels": ["work","important"]
     },
@@ -711,7 +711,7 @@
         "sentTimeStamp": 1600928114,
         "body": "We wanted to let you know of an upcoming price change to your Disney+ subscription. Effective on December 10, 2022, your subscription will now be called the Disney+ Premium plan and will change in price to $10.99 per month. Your payment method on file will be charged unless you cancel your subscription before December 10, 2022.",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["important"," "]
     },
@@ -723,7 +723,7 @@
         "sentTimeStamp": 1604932260,
         "body": "The Amazon Price for Fire TV Stick Lite with Alexa Voice Remote Lite (no TV controls), HD streaming device has dropped at Amazon and is now $12.00 below your desired price. Additionally, our system has determined that the current price is the best price as it is the lowest price we've seen on this product.",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["orders",""]
     },
@@ -735,7 +735,7 @@
         "sentTimeStamp": 1624627860,
         "body": "Cancellation confirmation! Your membership has ended. To reactivate it, please contact Customer Support. In the meantime, your account has reverted to a basic, free level of membership. Free memberships retain limited access to Creative Cloud services and 2GB of complimentary online storage. (You may need to delete files to meet your new storage limitations.) Keep exploring Creative Cloud, and we wish you well in your future endeavors.",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work","orders"]
     },
@@ -747,7 +747,7 @@
         "sentTimeStamp": 1643121060,
         "body": "We'll soon sunset Universal Analytics On July 1, 2023, Universal Analytics will stop processing new hits. If you still rely on Universal Analytics, we urge you to prepare for the future by moving over to Google Analytics 4, our next-generation measurement solution.",
         "isStarred": false,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isRead": true,
         "labels": ["work",""]
     },
@@ -759,7 +759,7 @@
         "sentTimeStamp": 1516252514,
         "body": "Dear Miriam,\nPlease see attached.\nI need you and Micah to review, print the 2 authorizations, and return to me at your earliest convenience.\nRivka:\nIncluded in interest income is $62 from the IRS (US treasury).  It is interest on a refund.  I understand that many Israeli accountants do not include it as taxable income.\nUS Dividends:  $8536 Foreign tax paid $162.  Other tax on return is irrelevant to Israel.\nCapital gains Vanguard short term $371, long term $1004 and capital gains distributions $516\nOther income amounts are unrelated to Israel.  They include Gilti income and contributions to kupot pensya, etc\nPlease send me the שומה צפויה  at your earliest convenience so that I can finalize.  The IRS is shutting down efiling services next week.\nI hope that the above is helpful.  Let me know if you have any questions.\nThanks,\nChanie",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work"," "]
     },
@@ -771,7 +771,7 @@
         "sentTimeStamp": 1551796260,
         "body": "FREE SHIPPING on $25+ USA orders \nEARRINGS\nRINGS\nBRACELETS\nNECKLACES\nNEW\nGET 10% OFF WITH CODE: THANKS\nNew Arrivals",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["work","important"]
     },
@@ -783,7 +783,7 @@
         "sentTimeStamp": 1667286446,
         "body": "Please find the invoice attached.\nThank you,\nMerah Geshi",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work"," "]
     },
@@ -795,7 +795,7 @@
         "sentTimeStamp": 1665054314,
         "body": "Hi Miriam, Tifara here - Thank you much for contacting Storyblocks! I am sorry to hear that you are interested in cancelling and refunding your Storyblocks subscription.\nWe'd love to keep you as a customer if possible, so I'd like to offer you a full year of access at no additional cost. We would extend your access through September 1, 2024, at which point your account would cancel.\nAlternatively, I would be happy to offer a refund for the most recent charge to your account if you no longer need access to your subscription.\n Please let me know which of these options you would prefer. In the meantime, I have ensured automatic renewal is turned off for your account.\n Looking forward to your reply!",
         "isStarred": false,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isDraft": true,
         "isRead": false,
         "labels": ["friends",""]
@@ -808,7 +808,7 @@
         "sentTimeStamp": 1616959394,
         "body": "Please turn on images to shop. 60% off bed & bath; 50% off everything else:\n Simply click any link in this e-mail and the Promotion Code and PIN will automatically be applied to your order. Or at checkout, manually enter the Promotion Code COMFY and PIN 1234.\n Receive 60% off bed & bath; 50% off everything else online, in-store or by phone (excludes buy more and save pricing, monogramming, gift boxing, gift cards, shipping, taxes, duties, Lands' End Business Outfitters purchases, and excluded items as marked). Discount will be applied at checkout. This offer has no cash value. Promotional savings may be deducted from returns. 5-7 business day delivery to most addresses. Free standard shipping is valid on orders of $99 or more (after promotions and discounts are applied) shipped to US and Canada addresses only. Offer valid through 11:59 p.m. Central, November 10, 2022. Not valid on previous purchases or when combined with any other promotional offers.\n 1 Subject to credit approval. Offer is exclusive to Lands’ End® Visa® credit card holders enrolled in the Lands’ End® Credit Card Rewards program. Lands’ End purchases shipped outside of the U.S. and all other retailers that sell Lands’ End merchandise only earn 1 point per $1. This rewards program is provided by Lands’ End, and its terms may change at any time. For full Rewards Terms and Conditions, please see comenity.net/landsendvisa or comenity.net/landsendcard.\n Lands’ End Visa® Credit Card Accounts are issued by Comenity Capital Bank pursuant to a license from Visa U.S.A. Inc. Visa is a registered trademark of Visa International Service Association and used under license.\n",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work"," "]
     },
@@ -820,7 +820,7 @@
         "sentTimeStamp": 1659262514,
         "body": "Joji\n SMITHEREENS OBLIVION\n with rei brown, Lil Toe (Ammo) & SavageRealm\n May 13, 2023\n Presale:\n Thursday, November 10 from 10AM to 10PM\n Use Code: INGLEWOOD (ONLINE ONLY)\n Get Tickets\n On Sale: Friday, November 11 at 10AM",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["fun",""]
     },
@@ -832,7 +832,7 @@
         "sentTimeStamp": 1525154846,
         "body": "You used to see this all the time.\nDrumming greats like Buddy Rich and Gene Krupa would face off in the ultimate drummer’s showdown: the drum battle.\n But drum battles have become rare… too rare. \n So today I’m excited to share a battle between the NEXT generation of drumming legends.\n Greyson Nekrutman & Brandon Toews went head-to-head in an epic drumming showdown that pays homage to the golden age of drumming.\n Click here to watch them trade furious licks in today’s NEW video:\n No two drummers are alike.\n And one thing I’ve always loved about drumming is how everybody approaches it differently – drums, cymbals, sticks, tuning… everything is unique to the individual drummer. And that’s why you should never compare yourself to anyone else.\n The most powerful thing you can do as a drummer is harness your own identity. \n It’s good to pull inspiration from others, but your ultimate goal should be to find your own voice on the kit. \n That’s what all the practicing, studying, and listening is for.\n Drumeo’s goal has always been to help more people find their voice on the drums – and there’s something HUGE coming at the end of the month to make that easier than ever.\n Stay tuned.\n To Your Drumming Success,\n- Jared Falk",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["fun",""]
     },
@@ -844,7 +844,7 @@
         "sentTimeStamp": 1571076914,
         "body": "Hope all is well with you. There are some changes that may be happening with the company in the near future and we'd like to discuss some matters with you. Can we set up a zoom meeting for Wednesday sometime after 14:00? Thank you very much!",
         "isStarred": true,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isRead": true,
         "labels": ["work","important"]
     },
@@ -856,7 +856,7 @@
         "sentTimeStamp": 1600928114,
         "body": "We wanted to let you know of an upcoming price change to your Disney+ subscription. Effective on December 10, 2022, your subscription will now be called the Disney+ Premium plan and will change in price to $10.99 per month. Your payment method on file will be charged unless you cancel your subscription before December 10, 2022.",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["important"," "]
     },
@@ -868,7 +868,7 @@
         "sentTimeStamp": 1604932260,
         "body": "The Amazon Price for Fire TV Stick Lite with Alexa Voice Remote Lite (no TV controls), HD streaming device has dropped at Amazon and is now $12.00 below your desired price. Additionally, our system has determined that the current price is the best price as it is the lowest price we've seen on this product.",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["orders",""]
     },
@@ -880,7 +880,7 @@
         "sentTimeStamp": 1624627860,
         "body": "Cancellation confirmation! Your membership has ended. To reactivate it, please contact Customer Support. In the meantime, your account has reverted to a basic, free level of membership. Free memberships retain limited access to Creative Cloud services and 2GB of complimentary online storage. (You may need to delete files to meet your new storage limitations.) Keep exploring Creative Cloud, and we wish you well in your future endeavors.",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work","orders"]
     },
@@ -892,7 +892,7 @@
         "sentTimeStamp": 1643121060,
         "body": "We'll soon sunset Universal Analytics On July 1, 2023, Universal Analytics will stop processing new hits. If you still rely on Universal Analytics, we urge you to prepare for the future by moving over to Google Analytics 4, our next-generation measurement solution.",
         "isStarred": false,
-        "isRemoved": true,
+        "isDiscarded": true,
         "isRead": true,
         "labels": ["work",""]
     },
@@ -904,7 +904,7 @@
         "sentTimeStamp": 1516252514,
         "body": "Dear Miriam,\nPlease see attached.\nI need you and Micah to review, print the 2 authorizations, and return to me at your earliest convenience.\nRivka:\nIncluded in interest income is $62 from the IRS (US treasury).  It is interest on a refund.  I understand that many Israeli accountants do not include it as taxable income.\nUS Dividends:  $8536 Foreign tax paid $162.  Other tax on return is irrelevant to Israel.\nCapital gains Vanguard short term $371, long term $1004 and capital gains distributions $516\nOther income amounts are unrelated to Israel.  They include Gilti income and contributions to kupot pensya, etc\nPlease send me the שומה צפויה  at your earliest convenience so that I can finalize.  The IRS is shutting down efiling services next week.\nI hope that the above is helpful.  Let me know if you have any questions.\nThanks,\nChanie",
         "isStarred": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isDraft": true,
         "isRead": true,
         "labels": ["work"," "]
@@ -917,7 +917,7 @@
         "sentTimeStamp": 1551796260,
         "body": "FREE SHIPPING on $25+ USA orders \nEARRINGS\nRINGS\nBRACELETS\nNECKLACES\nNEW\nGET 10% OFF WITH CODE: THANKS\nNew Arrivals",
         "isStarred": false,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": false,
         "labels": ["work","important"]
     },
@@ -930,7 +930,7 @@
         "body": "50% Off Almost Everything: Offer expires November 13, 2022 (11:59 P.M. PT). Offer is good for up to 50% off products (some exclusions apply) through shutterfly.com or the Shutterfly app. Not valid on Tiny Prints products, photo prints, calendars, prepaid or annual savings plans, video plans, yearbook orders, gift cards, cards sent using mailing services, designer review services, orders placed for in-store pick up and prior purchases. Discount on Spoonflower products is only available on Shutterfly.com or the Shutterfly app. Offer will automatically apply at checkout. Taxes, shipping and handling may apply. Offer cannot be redeemed for cash or combined with select offers or credits. Shutterfly may refuse or cancel orders due to promo and pricing errors, fraud, misuse, or unauthorized use. Shutterfly may modify or replace any part of these terms and conditions without notice at any time. Valid while supplies last.",
         "isStarred": false,
         "isDraft": true,
-        "isRemoved": false,
+        "isDiscarded": false,
         "isRead": true,
         "labels": ["work"," "]
     }
