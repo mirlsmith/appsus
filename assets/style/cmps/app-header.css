@@ -25,10 +25,18 @@
 }
 
 .app-header .main-nav .main-links svg {
-  fill: gray;
+  fill: #9b9b9b;
   cursor: pointer;
   width: 48px;
+  border-radius: 7px;
+  transition: .3s;
 }
+
+.app-header .main-nav .main-links svg:hover {
+  background-color: #d8d8d8;
+  fill: #707070;
+}
+
 
 .app-header .main-nav .main-links nav {
   width: 200px;
