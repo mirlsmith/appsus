@@ -7,7 +7,8 @@ export const notesService = {
     query,
     getNoteById,
     remove,
-    save
+    save,
+    updateNote
 }
 
 const NOTES_STORAGE_KEY = 'notesDB'
@@ -27,9 +28,13 @@ function remove(noteId) {
     return storageService.remove(NOTES_STORAGE_KEY, noteId)
 }
 
-function save(note) {
+function save(note, append = true) {
     note.id = utilService.makeId()
-    return storageService.post(NOTES_STORAGE_KEY, note)
+    return storageService.post(NOTES_STORAGE_KEY, note, append)
+}
+
+function updateNote(note) {
+    return storageService.put(NOTES_STORAGE_KEY, note)
 }
 
 // PRIVATE
