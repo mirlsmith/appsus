@@ -25,7 +25,7 @@ export default {
         filterByType(mail) {
             const filterType = this.filterBy.type || this.filterType
            
-            if (mail.isRemoved) return (filterType === 'trash')
+            if (mail.isDiscarded) return (filterType === 'trash')
             else {
                 if (filterType === 'inbox') return (mail.to === mailService.getUser().email   && !mail.isDraft)
                 if (filterType === 'starred') return mail.isStarred
