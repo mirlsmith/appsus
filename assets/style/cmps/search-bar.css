@@ -9,6 +9,7 @@
 
     width: 100%;
     padding: 20px;
+    z-index: 10;
 }
 
 .search-bar .search-container {
