@@ -1,25 +1,38 @@
+const NOTE_TYPES = {
+  NOTE_TXT: 'note-txt',
+  NOTE_VIDEO: 'note-video',
+  NOTE_IMG: 'note-img',
+  NOTE_TODOS: 'note-todos'
+}
+
 const noteTypes = [
-  { faClass: 'fa fa-font', title: 'Texts', type: 'note-txt' },
-  { faClass: 'fa fa-video-camera', title: 'Videos', type: 'note-video' },
-  { faClass: 'fa fa-picture-o', title: 'Image', type: 'note-img' },
-  { faClass: 'fa fa-list', title: 'Todos', type: 'note-todos' }
+  { faClass: 'fa fa-font', title: 'Texts', type: NOTE_TYPES.NOTE_TXT },
+  { faClass: 'fa fa-video-camera', title: 'Videos', type: NOTE_TYPES.NOTE_VIDEO },
+  { faClass: 'fa fa-picture-o', title: 'Image', type: NOTE_TYPES.NOTE_IMG },
+  { faClass: 'fa fa-list', title: 'Todos', type: NOTE_TYPES.NOTE_TODOS }
 ]
+
+const gMapNoteTypeToInfoKey = {
+  [NOTE_TYPES.NOTE_TXT]: 'txt',
+  [NOTE_TYPES.NOTE_VIDEO]: 'url',
+  [NOTE_TYPES.NOTE_IMG]: 'url',
+  [NOTE_TYPES.NOTE_TODOS]: 'todos'
+}
 
 export default {
   template: `
     <div class="note-add">
       <form class="note-form" @submit.prevent="handleSubmit">
-        <input type="text" :placeholder="getTitlePlaceholder" v-model="note.title"
+        <input type="text" :placeholder="getTitlePlaceholder" v-model="note.info.title"
           @click="isOnFocus = true">
         <div class="note-types">
           <i v-for="noteType in getNoteTypes"
-            :class="noteType.faClass"
-            :class="setActiveClass(noteType.type)"
+            :class="getNoteTypeClasses(noteType)"
             :title="noteType.title"
             @click="note.type = noteType.type">
           </i>
         </div>
-        <input type="text" v-if="isOnFocus" :placeholder="getNoteTypePlaceholder">
+        <input type="text" v-if="isOnFocus" :placeholder="getNoteTypePlaceholder" v-model="dynamicCmpValue">
         <button type="submit" v-if="isOnFocus"><i class="fa-solid fa-plus"></i>Create note</button>
       </form>
     </div>
@@ -27,18 +40,50 @@ export default {
   data() {
     return {
       note: {
-        type: 'note-txt',
-        title: '',
+        type: NOTE_TYPES.NOTE_TXT,
+        isPinned: false,
+        info: {
+          title: ''
+        }
       },
+      dynamicCmpValue: '',
       isOnFocus: false
     }
   },
   methods: {
-    handleSubmit() {
-      this.$emit('onSubmit', this.note)
+    getDynamicValue() {
+      switch (this.note.type) {
+        case NOTE_TYPES.NOTE_TODOS:
+          return this.dynamicCmpValue.split(',')
+            .map(key => ({ txt: key.trim(), isDone: false }))
+        case NOTE_TYPES.NOTE_VIDEO:
+          const url = new URL(this.dynamicCmpValue)
+          const videoId = new URLSearchParams(url.search).get('v')
+          return 'https://www.youtube.com/embed/' + videoId
+      
+        default:
+          return this.dynamicCmpValue
+      }
     },
-    setActiveClass(noteType) {
-      return { active: this.note.type === noteType }
+    handleSubmit() {
+      const dynamicCmpKey = gMapNoteTypeToInfoKey[this.note.type]
+      const note = {
+        ...this.note,
+        info: {
+          title: this.note.info.title,
+          [dynamicCmpKey]: this.getDynamicValue()
+        }
+      }
+
+      this.note.info.title = ''
+      this.dynamicCmpValue = ''
+      this.$emit('onSubmit', note)
+    },
+    getNoteTypeClasses(noteType) {
+      return {
+        active: this.note.type === noteType.type,
+        [noteType.faClass]: true
+      }
     }
   },
   computed: {
@@ -48,13 +93,13 @@ export default {
     getNoteTypePlaceholder() {
       let placeholder = 'Take a note..'
       switch (this.note.type) {
-        case 'note-video':
+        case NOTE_TYPES.NOTE_VIDEO:
           placeholder = 'Type a youtube video url..'
           break;
-        case 'note-img':
+        case NOTE_TYPES.NOTE_IMG:
           placeholder = 'Type a image url..'
           break;
-        case 'note-todos':
+        case NOTE_TYPES.NOTE_TODOS:
           placeholder = 'Type a todo-list separated by commas..'
           break;
       }
