@@ -3,25 +3,36 @@ import { mailService } from "../services/mail.service.js";
 export default {
     template: `
         <section v-if="mail" class="mail-details">
-          <section class="mail-actions">
-          <i 
-            @click="goBack()"
-            class="fa-solid fa-arrow-left clk"></i>
-          <i
-            @click="removeMail()" 
-            class="fa-solid fa-trash-can clk"></i>
-          </section>
-          <h1>{{mail.subject}}</h1>
-          <h4>{{mail.from}}</h4>
-          <h4>{{formattedDate}}</h4>
-          <p>{{mail.body}}</p>
+          <div class="mail-actions">
+            <i 
+              @click="goBack()"
+              class="fa-solid fa-arrow-left clk"
+              title="go back"></i>
+            <i
+              @click="removeMail()" 
+              class="fa-solid fa-trash-can clk"
+              title="discard"></i>
+          </div>
+          <div class="mail-body">
+              <h1>{{mail.subject}}</h1>
+              <div class="sender-date">
+                <h4 class="sender">{{mail.from}}</h4>
+                <h4 class="date">{{formattedDate}}</h4>
+              </div>
+              <p>{{mail.body}}</p>
+          </div>
         </section>
             
       `,
     created() {
       const id = this.$route.params.id
       mailService.get(id)
-        .then(mail => this.mail = mail)
+        .then((mail) => {
+          this.mail = mail
+          this.mail.isRead = true
+          mailService.save(this.mail)
+        })
+      
 
     },
     data() {
