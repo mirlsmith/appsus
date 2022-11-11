@@ -1,4 +1,7 @@
 .app-header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
   background-color: white;
   color: var(--secondary-clr1);
   padding: 1em;
