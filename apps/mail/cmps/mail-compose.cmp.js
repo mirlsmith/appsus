@@ -1,18 +1,20 @@
+import { eventBus } from "../../../services/event-bus.service.js"
+
 export default {
     template: `
             <section class="mail-compose">
                 <div class="header">
                     <span class="new-msg">New Message</span>
-                    <button class="close">x</button>
+                    <button @click="mailSavedDraft" class="close" title="close and save">x</button>
                 </div>
                 <form>
-                    <input type="text" class="mail-to" placeholder="To"/>
-                    <input type="text" class="mail-subject" placeholder="Subject"/>
-                    <textarea class="mail-body" cols="30" rows="10"></textarea>
+                    <input v-model.trim="mail.to" ref="recipient" type="text" class="mail-to" placeholder="To"/>
+                    <input v-model.trim="mail.subject" type="text" class="mail-subject" placeholder="Subject"/>
+                    <textarea v-model="mail.body" class="mail-body" cols="30" rows="10"></textarea>
                     <div class="actions">
-                        <button @click.stop="mailSent" class="mail-send blue-mail-btn">Send</button>
+                        <button @click.prevent="mailSent" class="mail-send blue-mail-btn" title="send">Send</button>
                         <i 
-                        @click.stop="mailDiscard"
+                        @click.prevent="mailDiscard"
                         class="fa-solid fa-trash-can clk" title="discard"></i>
                     </div>
                 </form>
@@ -20,34 +22,53 @@ export default {
     `,
     data() {
         return {
-            mailDetails: {
-
-
-            }
+            mail: {
+                id: null,
+                subject: '',
+                from: 'user@appsus.com',
+                to: '',
+                sentTimeStamp: Date.now()/1000,
+                body: '',
+                isStarred: false,
+                isRemoved: false,
+                isRead: false,
+                isDraft: true,
+                labels: ['','']
+            },
+            autoSaveinterval: null,
+            draftTimeOut: null
         }
     },
     created(){
-        //todo start settimeout every 5 sec to save mail as draft
+        this.unmountedAutoSaveEmail = eventBus.on('emailAutoSaved', this.updateDraftId)
+
+        this.autoSaveinterval = setInterval(()=>{
+            this.$emit('autosave', {...this.mail})
+        }, 5000)
+    },
+    mounted() {
+        this.$refs.recipient.focus()
     },
     methods: {
         mailSent(){
-            this.$emit('sent', this.mailDetails)
-            //clear timeout
+            clearInterval(this.autoSaveinterval)
+            this.mail.isDraft = false
+            this.$emit('sent', {...this.mail})
         },
         mailDiscard() {
-            this.$emit('discard', this.mailDetails)
-            //clear timeout
-
+            clearInterval(this.autoSaveinterval)
+            this.$emit('discard', {...this.mail})            
+        },
+        mailSavedDraft() {
+            clearInterval(this.autoSaveinterval)
+            this.$emit('close', {...this.mail})
+        },
+        updateDraftId(mail) {
+            if (!this.mail.id) this.mail.id = mail.id
         }
-
-
     },
-
-    computed: {
-
-    },
-
-    components: {
-
+    umounted() {
+        clearInterval(this.autoSaveinterval)
+        this.unmountedAutoSaveEmail()
     },
 }

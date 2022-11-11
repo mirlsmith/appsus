@@ -33,7 +33,7 @@ function remove(mailId) {
 }
 
 function save(mail) {
-    if (mail.id) return storageService.put(MAILS_KEY, mail) //utilize for DRAFT feature?
+    if (mail.id) return storageService.put(MAILS_KEY, mail) 
     else 
     return storageService.post(MAILS_KEY, mail)
 }
@@ -41,7 +41,6 @@ function save(mail) {
 function getUser() {
     return loggedInUser
 }
-
 
 function _createMails() {
     let mails = utilService.loadFromStorage(MAILS_KEY)

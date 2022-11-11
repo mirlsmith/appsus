@@ -1,10 +1,8 @@
 .mail-page .side-nav .compose-btn {
-    /* margin-block-end: 20px; */
     margin-inline-start: 20px;
 }
 
 .mail-page .side-nav a {
-    /* border-radius: 5px; */
     padding-top: 13px;
     padding-bottom: 10px;
     padding-left: 20px;
@@ -30,6 +28,7 @@
 
 .mail-list {
     margin-left: 20px;
+    margin-right: 20px;
 }
 
 /* MAIL PREVIEW */

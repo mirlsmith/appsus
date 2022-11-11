@@ -32,6 +32,7 @@
     border: none;
     background: var(--clr4);
     font-size: 1.5em;
+    border-radius: 6px;
 }
 
 .mail-compose form {
@@ -49,7 +50,7 @@
         height: 270px;
         border: none;
         outline: none;
-        
+        padding: 20px;
         overflow: auto;
         resize: none;
         font-family: roboto;
