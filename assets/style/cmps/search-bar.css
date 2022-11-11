@@ -1,5 +1,6 @@
 .search-bar {
     
+    background-color: white;
     position: fixed;
 
     /* this makes it be to the right of the sidenav and below the main header */
