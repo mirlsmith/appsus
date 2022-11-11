@@ -7,11 +7,11 @@ export default {
             <i 
               @click="goBack()"
               class="fa-solid fa-arrow-left clk"
-              title="go back"></i>
+              title="Go back"></i>
             <i
               @click="removeMail()" 
               class="fa-solid fa-trash-can clk"
-              title="discard"></i>
+              title="Discard"></i>
           </div>
           <div class="mail-body">
               <h1>{{mail.subject}}</h1>
@@ -22,7 +22,6 @@ export default {
               <p>{{mail.body}}</p>
           </div>
         </section>
-            
       `,
     created() {
       const id = this.$route.params.id
@@ -45,11 +44,11 @@ export default {
         this.$router.go(-1)
       },
       removeMail() {
-        if (this.mail.isRemoved) mailService.remove(this.mail.id).then(()=> {
+        if (this.mail.isDiscarded) mailService.remove(this.mail.id).then(()=> {
           this.goBack()
         })
         else {
-          this.mail.isRemoved = true
+          this.mail.isDiscarded = true
           mailService.save(this.mail).then(()=>{
             this.goBack()
           })
