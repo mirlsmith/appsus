@@ -1,9 +1,11 @@
+import { mailService } from "../services/mail.service.js"
+
 export default {
     props: ['mail'],
     template: `
         <article class="mail-preview clk"
             :class="{starred: mail.isStarred, read: mail.isRead}">
-            <div @click.stop="mail.isStarred = !mail.isStarred" class="star clk">
+            <div @click.stop="toggleStar" class="star clk">
                 <i class="fa-regular fa-star star clk"></i>
             </div>
             <h3 class="from">{{ mail.from }}</h3>
@@ -11,12 +13,34 @@ export default {
             <p class="body">{{mail.body}}</p>
             <span class="date">{{ formattedDate }}</span>
             <div class="actions">
-                <i class="fa-solid fa-envelope" title="Mark as read"></i>
-                <i class="fa-solid fa-envelope-open" title="Mark as unread"></i>
-                <i class="fa-solid fa-trash-can clk" title="discard"></i>
+                <i v-show="mail.isRead"
+                    @click.stop="toggleRead"
+                    class="fa-solid fa-envelope clk" title="Mark as unread"></i>
+                <i v-show="!mail.isRead" 
+                    @click.stop="toggleRead"
+                    class="fa-solid fa-envelope-open clk" title="Mark as read"></i>
+                <i @click.stop="discardMail" class="fa-solid fa-trash-can clk" title="Discard"></i>
             </div>
         </article>
     `,
+    methods:{
+        toggleStar(){
+            this.mail.isStarred = !this.mail.isStarred
+            // this.$emit('statusChange', this.mail)
+            mailService.save(this.mail)
+        },
+        toggleRead(){
+            this.mail.isRead = !this.mail.isRead
+            // this.$emit('statusChange', this.mail)
+            mailService.save(this.mail)
+        },
+        discardMail(){
+            //TODO what happens here???
+            if (this.mail.isDiscarded){
+                
+            }
+        }
+    },
     computed: {
         formattedDate() {
             const date = new Date(this.mail.sentTimeStamp*1000)
