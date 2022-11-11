@@ -17,7 +17,8 @@ export default {
 
       <component
         :is="note.type"
-        :info="note.info" />
+        :info="note.info"
+        :noteId="note.id" />
 
       <note-actions @click.stop=""
         @onBgClick="toggleColors"
