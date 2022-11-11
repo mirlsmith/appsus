@@ -1,10 +1,10 @@
 export default {
     props: ['mail'],
     template: `
-        <article class="mail-preview clk" 
+        <article class="mail-preview clk"
             :class="{starred: mail.isStarred, read: mail.isRead}">
-            <div @clicked.lazy="mail.isStarred = !mail.isStarred" class="star clk">
-                <i class="fa-regular fa-star"></i>
+            <div @click.stop="mail.isStarred = !mail.isStarred" class="star clk">
+                <i class="fa-regular fa-star star clk"></i>
             </div>
             <h3 class="from">{{ mail.from }}</h3>
             <h3 class="subject">{{ mail.subject }} - </h3>
