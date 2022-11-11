@@ -10,6 +10,11 @@ export default {
             <h3 class="subject">{{ mail.subject }} - </h3>
             <p class="body">{{mail.body}}</p>
             <span class="date">{{ formattedDate }}</span>
+            <div class="actions">
+                <i class="fa-solid fa-envelope" title="Mark as read"></i>
+                <i class="fa-solid fa-envelope-open" title="Mark as unread"></i>
+                <i class="fa-solid fa-trash-can clk" title="discard"></i>
+            </div>
         </article>
     `,
     computed: {
