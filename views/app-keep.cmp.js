@@ -1,4 +1,5 @@
 import { notesService } from '../apps/keep/services/note.service.js'
+import { eventBus, showSuccessMsg } from '../services/event-bus.service.js'
 
 import searchBar from '../cmps/search-bar.cmp.js'
 import noteList from '../apps/keep/cmps/note-list.cmp.js'
@@ -36,8 +37,8 @@ export default {
             <div class="notes-container">
                 <note-add @onSubmit="handleNoteAdded" />
                 
-                <p v-if="pinnedNotesToShow.length > 0">PINNED</p>
-                <note-list :notes="pinnedNotesToShow"
+                <p v-if="getPinnedNotes.length > 0">PINNED</p>
+                <note-list :notes="getPinnedNotes"
                     enter-class="animate__bounceIn"
                     leave-class="animate__bounceOut"
                     @onNoteClick="handleNoteSelection"
@@ -45,8 +46,8 @@ export default {
                     @onNoteRemove="handleNoteRemove"
                     @onNoteDuplicate="handleNoteDuplicate" />
 
-                <p v-if="notesToShow.length > 0">OTHERS</p>
-                <note-list :notes="notesToShow"
+                <p v-if="getUnpinnedNotes.length > 0">OTHERS</p>
+                <note-list :notes="getUnpinnedNotes"
                     enter-class="animate__fadeInDown"
                     leave-class="animate__backOutDown"
                     @onNoteClick="handleNoteSelection"
@@ -69,17 +70,24 @@ export default {
     `,
     created() {
         this.loadNotes()
+        this.todoChangeListener = eventBus.on('onTodoChange', this.handleTodoChange)
+        this.txtChangeListener = eventBus.on('onTxtChange', this.handleTxtChange)
+    },
+    unmounted() {
+        this.todoChangeListener && this.todoChangeListener()
+        this.txtChangeListener && this.txtChangeListener()
     },
     data() {
         return {
             notes: [],
-            pinnedNotes: [],
             selectedNote: null,
             isNoteModalOpen: false,
             filter: {
                 type: '',
                 txt: ''
-            }
+            },
+            todoChangeListener: null,
+            txtChangeListener: null
         }
     },
     watch: {
@@ -93,38 +101,67 @@ export default {
         },
         loadNotes() {
             notesService.query()
-                .then(notes => {
-                    this.pinnedNotes = notes.filter(note => note.isPinned) // Pinned notes
-                    this.notes = notes.filter(note => !note.isPinned) // Others
-                })
-        },
-        handleNoteAdded(note) {
-            console.log('TO-DO: Add', note);
+                .then(notes => this.notes = notes)
         },
         handleNoteSelection(note) {
             this.selectedNote = note
             this.isNoteModalOpen = true
         },
+        handleNoteAdded(note) {
+            notesService.save(note, false)
+                .then(newNote => {
+                    this.notes.unshift(newNote)
+                    showSuccessMsg('The note has been added!')
+                })
+        },
         handleNotePinned(note) {
-            console.log('TO-DO: Pinned', note);
+            note.isPinned = !note.isPinned
+            notesService.updateNote(note)
         },
         handleNoteRemove(noteId) {
-            console.log('TO-DO: Remove', noteId);
+            notesService.remove(noteId)
+                .then(() => {
+                    const idx = this.notes.findIndex(note => note.id === noteId)
+                    this.notes.splice(idx, 1)
+                    showSuccessMsg('The note has been removed!')
+                })
         },
         handleNoteDuplicate(note) {
-            console.log('TO-DO: Duplicate', note);
+            const dupNote = JSON.parse(JSON.stringify(note))
+            dupNote.info.title += ' (Duplicated)'
+            notesService.save(dupNote, false)
+                .then(newNote => {
+                    this.notes.unshift(newNote)
+                    showSuccessMsg('The note has been duplicated!')
+                })
+        },
+        handleTodoChange({ noteId, todo }) {
+            const note = this.notes.find(n => n.id === noteId)
+            if (todo.isDone) todo.doneAt = Date.now()
+            notesService.updateNote(note)
+        },
+        handleTxtChange({ noteId, info }) {
+            const note = this.notes.find(note => note.id === noteId)
+            note.info = info
+            notesService.updateNote(note)
         }
     },
     computed: {
-        notesToShow() {
-            if (!this.filter.type) return this.notes
+        getPinnedNotes() {
+            const pinnedNotes = this.notes.filter(note => note.isPinned)
             const regex = new RegExp(this.filter.txt, 'i')
-            return this.notes.filter(note => note.type === this.filter.type && regex.test(note.info.title))
+            return (this.filter.type ?
+                pinnedNotes.filter(note => note.type === this.filter.type) :
+                pinnedNotes)
+                .filter(note => regex.test(note.info.title))
         },
-        pinnedNotesToShow() {
+        getUnpinnedNotes() {
+            const unpinnedNotes = this.notes.filter(note => !note.isPinned)
             const regex = new RegExp(this.filter.txt, 'i')
-
-            return this.pinnedNotes.filter(note => note.type === this.filter.type)
+            return (this.filter.type ?
+                unpinnedNotes.filter(note => note.type === this.filter.type) :
+                unpinnedNotes)
+                .filter(note => regex.test(note.info.title))
         },
         getFilter() {
             return this.$route.params.filterBy
