@@ -2,8 +2,7 @@ export default {
     props: ['mail'],
     template: `
         <article class="mail-preview clk" 
-            :class="{starred: mail.isStarred}"
-            :class="{read: mail.isRead}">
+            :class="{starred: mail.isStarred, read: mail.isRead}">
             <div @clicked.lazy="mail.isStarred = !mail.isStarred" class="star clk">
                 <i class="fa-regular fa-star"></i>
             </div>
