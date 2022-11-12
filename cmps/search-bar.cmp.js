@@ -1,7 +1,7 @@
 export default {
     template: `
 
-        <section class="search-bar">
+        <section class="search-bar right-of-sidenav">
             <div class="search-container">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input
