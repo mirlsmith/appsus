@@ -1,4 +1,4 @@
-import { eventBus } from "../../../services/event-bus.service.js"
+import { eventBus, showSuccessMsg } from "../../../services/event-bus.service.js"
 
 export default {
     template: `
@@ -36,11 +36,16 @@ export default {
                 labels: ['','']
             },
             autoSaveinterval: null,
+            autoSaveTimeout: null,
             draftTimeOut: null
         }
     },
     created(){
         this.unmountedAutoSaveEmail = eventBus.on('emailAutoSaved', this.updateDraftId)
+
+        this.autoSaveTimeout = setTimeout(()=>{
+            showSuccessMsg('Your email will be autosaved every 5 seconds')
+        },5000)
 
         this.autoSaveinterval = setInterval(()=>{
             this.$emit('autosave', {...this.mail})
@@ -50,17 +55,24 @@ export default {
         this.$refs.recipient.focus()
     },
     methods: {
-        mailSent(){
+        clearTimeoutAndInterval(){
             clearInterval(this.autoSaveinterval)
+            clearTimeout(this.autoSaveTimeout)
+        },
+        mailSent(){
+            this.clearTimeoutAndInterval()
+            showSuccessMsg('Your email has been sent')
             this.mail.isDraft = false
             this.$emit('sent', {...this.mail})
         },
         mailDiscard() {
-            clearInterval(this.autoSaveinterval)
+            showSuccessMsg('Your email has been discarded')
+            this.clearTimeoutAndInterval()
             this.$emit('discard', {...this.mail})            
         },
         mailSavedDraft() {
-            clearInterval(this.autoSaveinterval)
+            showSuccessMsg('Your email will be saved in the drafts folder')
+            this.clearTimeoutAndInterval()
             this.$emit('close', {...this.mail})
         },
         updateDraftId(mail) {
@@ -68,7 +80,7 @@ export default {
         }
     },
     umounted() {
-        clearInterval(this.autoSaveinterval)
+        this.clearTimeoutAndInterval()
         this.unmountedAutoSaveEmail()
     },
 }
