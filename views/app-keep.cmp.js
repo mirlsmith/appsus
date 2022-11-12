@@ -46,7 +46,7 @@ export default {
                     @onNoteRemove="handleNoteRemove"
                     @onNoteDuplicate="handleNoteDuplicate" />
 
-                <p v-if="getUnpinnedNotes.length > 0">OTHERS</p>
+                <p v-if="getUnpinnedNotes.length > 0" style="margin-top: 32px">OTHERS</p>
                 <note-list :notes="getUnpinnedNotes"
                     enter-class="animate__fadeInDown"
                     leave-class="animate__backOutDown"
@@ -64,7 +64,8 @@ export default {
                 <note-modal v-if="isNoteModalOpen"
                     :note="selectedNote"
                     :open="isNoteModalOpen"
-                    @onClose="this.isNoteModalOpen = false" />
+                    @onClose="this.isNoteModalOpen = false"
+                    @onBgChange="handleBgChangeChange" />
             </Transition>
         </section>
     `,
@@ -72,10 +73,12 @@ export default {
         this.loadNotes()
         this.todoChangeListener = eventBus.on('onTodoChange', this.handleTodoChange)
         this.txtChangeListener = eventBus.on('onTxtChange', this.handleTxtChange)
+        this.bgColorChangeListener = eventBus.on('onBgChange', payload => this.handleBgChangeChange(payload, true))
     },
     unmounted() {
         this.todoChangeListener && this.todoChangeListener()
         this.txtChangeListener && this.txtChangeListener()
+        this.bgColorChangeListener && this.bgColorChangeListener()
     },
     data() {
         return {
@@ -87,7 +90,8 @@ export default {
                 txt: ''
             },
             todoChangeListener: null,
-            txtChangeListener: null
+            txtChangeListener: null,
+            bgColorChangeListener: null
         }
     },
     watch: {
@@ -144,6 +148,11 @@ export default {
             const note = this.notes.find(note => note.id === noteId)
             note.info = info
             notesService.updateNote(note)
+        },
+        handleBgChangeChange({ note, bgColor }, quickSave = false) {
+            note.style = {} // just for the demo data (because, some don't have .style obj, can be remove on app-ready)
+            note.style.backgroundColor = bgColor
+            if (quickSave) notesService.updateNote(note)
         }
     },
     computed: {

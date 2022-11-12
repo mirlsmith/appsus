@@ -21,22 +21,13 @@ export default {
         :noteId="note.id" />
 
       <note-actions @click.stop=""
-        @onBgClick="toggleColors"
+        :note="note"
         @onRemove="$emit('onRemove', note.id)"
-        @onDuplicate="$emit('onDuplicate', note)"
-        @onSendMail="sendToMail" />
+        @onDuplicate="$emit('onDuplicate', note)" />
     </article>
   `,
   data() {
     return {
-    }
-  },
-  methods: {
-    toggleColors() {
-      console.log('TODO: Open color picker');
-    },
-    sendToMail() {
-      console.log('TODO: Send to mail');
     }
   },
   computed: {
