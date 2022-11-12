@@ -1,3 +1,4 @@
+import { eventBus } from "../../../services/event-bus.service.js"
 import { mailService } from "../services/mail.service.js"
 
 export default {
@@ -35,10 +36,12 @@ export default {
             mailService.save(this.mail)
         },
         discardMail(){
-            //TODO what happens here???
             if (this.mail.isDiscarded){
-                
+                mailService.remove(this.mail)
+                eventBus.emit('emailRemoved',this.mail.id)
             }
+            this.mail.isDiscarded = true
+            mailService.save(this.mail)
         }
     },
     computed: {

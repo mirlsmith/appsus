@@ -8,7 +8,7 @@ export default {
         <section class="mail-page">
             <nav class="side-nav">
                 <button @click="isMailCompose=true" class="compose-btn blue-mail-btn">Compose</button>
-                <router-link to="/mail/index/inbox">Inbox</router-link>
+                <router-link to="/mail/index/inbox">Inbox <span class="unread-inbox-count"></span> </router-link>
                 <router-link to="/mail/index/starred">Starred</router-link>
                 <router-link to="/mail/index/sent">Sent</router-link>
                 <router-link to="/mail/index/drafts">Drafts</router-link>
