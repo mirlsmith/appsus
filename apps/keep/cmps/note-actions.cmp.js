@@ -8,7 +8,6 @@ const platteColors = [
   '#50577A',
   '#FF8787',
   '#2192FF',
-  '#06283D',
   '#EB1D36'
 ]
 
