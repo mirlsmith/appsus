@@ -1,0 +1,30 @@
+.home-page {
+    margin-top: 90px;
+    /* background-image: url(../../img/homepage.png); */
+    background-image: url(../../img/homepage2.png);
+    background-size: cover;
+    height: calc(100vh - 90px);
+    width: 100vw;
+}
+
+.home-page .title {
+    /* color: var(--clr2); */
+    /* font-size: 50px; */
+    /* font-family: roboto-bold; */
+    position: absolute;
+    /* left: 10%; */
+    top: 250px;
+    user-select: none;
+
+
+    color: var(--clr3);
+    left: 25%;
+    font-family: 'roboto-reg';
+    font-weight: bolder;
+    font-size: 80px;
+    line-height: 0.5em;
+}
+.home-page .title p {
+   /* text-shadow: 2px 2px 2px var(--clr2); */
+   text-shadow: 1px 1px 2px rgb(150 150 150);
+}
