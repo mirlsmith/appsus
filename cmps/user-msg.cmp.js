@@ -2,9 +2,13 @@ import { eventBus } from '../services/event-bus.service.js'
 
 export default {
 	template: `
-        <section :class="msg.type" v-if="msg.txt" class="user-msg">
-            {{ msg.txt }}
-        </section>
+				<Transition name="custom-classes"
+					enter-active-class="animate__animated animate__fadeInUp animate__fast"
+					leave-active-class="animate__animated animate__fadeOutDown animate__faster">
+					<section :class="msg.type" v-if="msg.txt" class="user-msg">
+							{{ msg.txt }}
+					</section>
+				</Transition>
     `,
 	data() {
 		return {

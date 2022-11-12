@@ -1,17 +1,24 @@
 .user-msg {
     position: fixed;
-    top: 40px;
-    right: 20px;
+    z-index: 300;
+    left: 50%;
+    bottom: 20px;
 
     width: 290px;
     background-color: rgb(208, 206, 139);
     padding: 10px;
     border-radius: 5px;
-    /* transition: opacity 1s; */
+    opacity: 0;
+    transition: opacity .3s;
+    color: white;
 }
+
 .success {
+    opacity: 1;
     background-color: rgb(88, 130, 88);
 }
+
 .error {
+    opacity: 1;
     background-color: rgb(187, 104, 104);
 }
