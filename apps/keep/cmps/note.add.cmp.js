@@ -32,8 +32,14 @@ export default {
             @click="note.type = noteType.type">
           </i>
         </div>
-        <input type="text" v-if="isOnFocus" :placeholder="getNoteTypePlaceholder" v-model="dynamicCmpValue">
-        <button type="submit" v-if="isOnFocus"><i class="fa-solid fa-plus"></i>Create note</button>
+        <Transition name="custom-classes"
+          enter-active-class="animate__animated animate__fadeInDown animate__faster"
+          leave-active-class="animate__animated animate__fadeOutUp animate__fast">
+            <div v-if="isOnFocus" class="dynamic-input">
+              <input type="text" :placeholder="getNoteTypePlaceholder" v-model="dynamicCmpValue">
+              <button type="submit"><i class="fa-solid fa-plus"></i>Create note</button>
+            </div>
+        </Transition>
       </form>
     </div>
   `,
@@ -44,6 +50,9 @@ export default {
         isPinned: false,
         info: {
           title: ''
+        },
+        style: {
+          backgroundColor: '#f1f3f4'
         }
       },
       dynamicCmpValue: '',
