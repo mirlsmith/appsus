@@ -54,6 +54,10 @@
     rotate: 90deg;
 }
 
+.outline-none {
+    outline: none;
+}
+
 /* font awsome */
 
 .fa {
