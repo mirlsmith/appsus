@@ -1,0 +1,33 @@
+@media (min-width: 568px) {
+  .note-list {
+    columns: auto 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .note-list {
+    columns: auto 3;
+  }
+
+  .note-add {
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .note-list {
+    columns: auto 4;
+  }
+}
+
+@media (min-width: 1250px) {
+  .note-list {
+    columns: auto 5;
+  }
+}
+
+@media (min-width: 1500px) {
+  .note-list {
+    columns: auto 6;
+  }
+}

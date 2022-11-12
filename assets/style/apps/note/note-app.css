@@ -36,7 +36,7 @@
 }
 
 .note-list {
-  columns: auto 5;
+  columns: auto 1;
   gap: 10px;
 }
 
@@ -44,7 +44,6 @@
 
 .note-add {
   width: 40%;
-  margin-inline: auto;
   margin-block: 10px;
 }
 
