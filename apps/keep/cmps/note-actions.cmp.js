@@ -18,7 +18,7 @@ export default {
       <i class="fa-solid fa-palette" title="Background color" @click="platteOpen"></i>
       <i class="fa-solid fa-trash-can" title="Remove note" @click="$emit('onRemove')"></i>
       <i class="fa-solid fa-clone" title="Duplicate" @click="$emit('onDuplicate')"></i>
-      <i class="fa-solid fa-envelope" title="Send to mail" @click="onSendToMail"></i>
+      <!-- <i class="fa-solid fa-envelope" title="Send to mail" @click="onSendToMail"></i> -->
       <Transition name="custom-classes"
         enter-active-class="animate__animated animate__fadeInUp animate__faster"
         leave-active-class="animate__animated animate__fadeOutDown animate__fast">
