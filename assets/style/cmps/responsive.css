@@ -1,0 +1,18 @@
+@media (max-width: 900px) {
+    .side-nav {
+      width: 80px;
+    }
+  
+    .right-of-sidenav {
+      margin-left: 80px;
+    }
+  
+    .mail-page .side-nav .compose-btn {
+      width: 70px;
+      margin-inline-start: 4px;
+      padding-left: 0;
+      padding-right: 0;
+      font-size: small;
+      min-width: 0px;
+    }
+}

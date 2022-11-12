@@ -7,7 +7,7 @@ import { eventBus } from "../../../services/event-bus.service.js"
 export default {
     template: `
             <search-bar @searched="setTextFilter"/>
-            <section class="mail-container">
+            <section class="mail-container right-of-sidenav">
                 <mail-list :mails="mailsToShow"/>
             </section>
   `,

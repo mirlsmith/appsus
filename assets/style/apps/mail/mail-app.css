@@ -22,7 +22,7 @@
   }
 
 .mail-container {
-    margin-left: 160px;
+    /* margin-left: 160px; */
     margin-top: 90px;
 }
 
@@ -126,7 +126,7 @@
 
 .mail-details {
     margin-top: 100px;
-    margin-left: 160px;
+    /* margin-left: 160px; */
     padding: 20px;
 
     display: flex;
@@ -155,3 +155,4 @@
 .mail-details .mail-body .sender-date .date{
     flex-shrink: 1;
 }
+

@@ -1,0 +1,19 @@
+@media (max-width: 900px) {
+    .mail-preview {
+        grid-template-columns: 30px 100px auto max-content;
+    }
+    
+    .mail-preview .body {
+        grid-column: 3/4;
+    }
+    
+    .mail-preview .date {
+        grid-column: -1/-2;
+        grid-row: 1/2;
+    }
+}
+@media (max-width: 550px) {
+    .mail-preview {
+        grid-template-columns: 20px 0px auto max-content;
+    }
+}

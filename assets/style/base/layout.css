@@ -2,9 +2,8 @@
   width: 100%;
 }
 
-.main-layout > *:not(.full) {
-  max-width: 1440px;
-  margin-inline: auto;
+.right-of-sidenav {
+  margin-left: 160px;
 }
 
 .side-nav {

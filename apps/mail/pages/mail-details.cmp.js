@@ -2,7 +2,7 @@ import { mailService } from "../services/mail.service.js";
 
 export default {
     template: `
-        <section v-if="mail" class="mail-details">
+        <section v-if="mail" class="mail-details right-of-sidenav">
           <div class="mail-actions">
             <i 
               @click="goBack()"
