@@ -24,7 +24,7 @@ const gFilterMapKey = {
 
 export default {
     template: `
-        <section class="keep-page">
+        <section class="keep-page right-of-sidenav">
 
             <search-bar @searched="setFilterByTxt" />
 
