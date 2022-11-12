@@ -22,4 +22,5 @@
 
 /* Responsive */
 @import 'apps/mail/responsive-mail.css';
+@import 'apps/note/responsive-note.css';
 @import './cmps/responsive.css';
