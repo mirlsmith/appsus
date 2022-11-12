@@ -1,5 +1,17 @@
 [
   {
+      "type": "note-txt",
+      "isPinned": false,
+      "info": {
+          "title": "Garden group (Duplicated)",
+          "txt": "2. Facebook group was  set up with some great pictures of the site. Please join and add photos here as we all grow the garden together: https://www.facebook.com/groups/518644946245196/ 3. We received a donation of 120 trees to plant. Here is the list of the trees: https://docs.google.com/spreadsheets/d/1bHXlOTTetBcQ3XGN4uBVc8OPGcp-NGUDrEIacTk1dxA/edit?usp=sharing   4. Today we marked all the holes for planting. Tomorrow, a bulldozer is coming at 7:30am to  start digging holes.   "
+      },
+      "style": {
+          "backgroundColor": "#FEBE8C"
+      },
+      "id": "u5FvE"
+  },
+  {
       "type": "note-video",
       "isPinned": false,
       "info": {
@@ -13,7 +25,7 @@
   },
   {
       "type": "note-todos",
-      "isPinned": false,
+      "isPinned": true,
       "info": {
           "title": "AppSus",
           "todos": [
@@ -61,20 +73,8 @@
       "id": "uW0B3"
   },
   {
-      "type": "note-txt",
-      "isPinned": false,
-      "info": {
-          "title": "Garden group",
-          "txt": "2. Facebook group was  set up with some great pictures of the site. Please join and add photos here as we all grow the garden together: https://www.facebook.com/groups/518644946245196/ 3. We received a donation of 120 trees to plant. Here is the list of the trees: https://docs.google.com/spreadsheets/d/1bHXlOTTetBcQ3XGN4uBVc8OPGcp-NGUDrEIacTk1dxA/edit?usp=sharing   4. Today we marked all the holes for planting. Tomorrow, a bulldozer is coming at 7:30am to  start digging holes.   "
-      },
-      "style": {
-          "backgroundColor": "#FEBE8C"
-      },
-      "id": "0ahk9"
-  },
-  {
       "type": "note-img",
-      "isPinned": false,
+      "isPinned": true,
       "info": {
           "title": "My dog",
           "url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg"
@@ -120,7 +120,8 @@
               },
               {
                   "txt": "Carino semi sweet red wine",
-                  "isDone": false
+                  "isDone": false,
+                  "doneAt": 1668294173779
               },
               {
                   "txt": "Barkan classic Cabernet Shiraz 2015",
@@ -139,7 +140,7 @@
   },
   {
       "type": "note-video",
-      "isPinned": false,
+      "isPinned": true,
       "info": {
           "title": "$1 vs $1,000,000 Hotel Room!",
           "url": "https://www.youtube.com/embed/iogcY_4xGjo"
