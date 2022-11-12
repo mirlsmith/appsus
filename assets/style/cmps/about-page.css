@@ -48,3 +48,17 @@
 .about-page .social-media-links a:hover{
     color: var(--secondary-clr3);
 }
+
+@media (max-width: 900px) {
+
+    .about-page .team-members {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .about-page .team-card {
+        max-width: 70%;
+    }
+
+}
