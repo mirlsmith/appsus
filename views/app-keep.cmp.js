@@ -57,15 +57,17 @@ export default {
 
             </div>
 
-            <div v-if="isNoteModalOpen" class="backdrop" @click.self="this.isNoteModalOpen = false"></div>
+            <div v-if="isNoteModalOpen" class="backdrop" @click.self="isNoteModalOpen = false"></div>
             <Transition name="custom-classes"
-                enter-active-class="animate__animated animate__zoomIn"
-                leave-active-class="animate__animated animate__zoomOut">
+                enter-active-class="animate__animated animate__fadeInDown animate__fast"
+                leave-active-class="animate__animated animate__fadeOutDown animate__faster">
                 <note-modal v-if="isNoteModalOpen"
                     :note="selectedNote"
                     :open="isNoteModalOpen"
-                    @onClose="this.isNoteModalOpen = false"
-                    @onBgChange="handleBgChangeChange" />
+                    @onClose="isNoteModalOpen = false"
+                    @onNoteRemove="noteId => { handleNoteRemove(noteId); isNoteModalOpen = false }"
+                    @onNoteDuplicate="note => { handleNoteDuplicate(note); isNoteModalOpen = false }"
+                    @onSaveNote="handleNoteSave" />
             </Transition>
         </section>
     `,
@@ -153,6 +155,15 @@ export default {
             note.style = {} // just for the demo data (because, some don't have .style obj, can be remove on app-ready)
             note.style.backgroundColor = bgColor
             if (quickSave) notesService.updateNote(note)
+        },
+        handleNoteSave(note) {
+            let matchedIdx = this.notes.findIndex(n => n.id === note.id)
+            this.notes[matchedIdx] = note
+            notesService.updateNote(note)
+                .then(() => {
+                    showSuccessMsg('Changes to the note has been updated successfully!')
+                    this.isNoteModalOpen = false
+                })
         }
     },
     computed: {
