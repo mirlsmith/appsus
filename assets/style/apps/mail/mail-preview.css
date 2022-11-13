@@ -1,0 +1,83 @@
+.mail-preview {
+  position: relative;
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: 50px 200px 200px auto max-content;
+  padding-inline-end: 10px;
+  gap: 10px;
+  box-shadow: inset 0 -1px 0 0 rgb(100 121 143 / 12%);
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  padding: 15px 10px;
+}
+
+.mail-preview:hover {
+  box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+}
+
+.mail-preview:hover .actions {
+  opacity: 1;
+}
+
+.mail-preview .actions {
+  background-color: var(--clr2);
+  padding-inline: 10px;
+  opacity: 0;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  /* transition: .5s; */
+  font-size: large;
+}
+
+.mail-preview.starred .fa-star {
+  color: var(--secondary-clr1);
+}
+
+.mail-preview.read > * {
+  font-family: roboto-reg;
+}
+
+.mail-preview > * {
+  font-family: roboto-bold;
+}
+
+.mail-preview:hover.read .actions {
+  background-color: white;
+}
+
+.mail-preview > * {
+  margin: 0;
+}
+
+.mail-preview i {
+  margin: auto;
+}
+
+.mail-preview .from {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mail-preview .subject {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.mail-preview .body {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mail-preview .date {
+  justify-self: end;
+}

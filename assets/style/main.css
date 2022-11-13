@@ -17,7 +17,9 @@
 
 /* Mail-App */
 @import 'apps/mail/mail-app.css';
-@import './apps/mail/mail-compose.css';
+@import 'apps/mail/mail-preview.css';
+@import 'apps/mail/mail-details.css';
+@import 'apps/mail/mail-compose.css';
 
 /* Note-App */
 @import 'apps/note/note-app.css';

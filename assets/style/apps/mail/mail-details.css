@@ -1,0 +1,32 @@
+.mail-details {
+  margin-top: 100px;
+  /* margin-left: 160px; */
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.mail-details .mail-actions {
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 10px 20px 10px;
+}
+
+.mail-details .mail-body h1{
+  font-size: 1.5em;
+}
+
+.mail-details .mail-body .sender-date {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 20px;
+}
+
+.mail-details .mail-body .sender-date .date{
+  flex-shrink: 1;
+}
