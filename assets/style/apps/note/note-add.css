@@ -1,0 +1,70 @@
+.note-add {
+  width: 40%;
+  margin-block: 10px;
+}
+
+.note-add input {
+  border: none;
+  border-bottom: 2px solid #5ea9ff;
+  padding: 5px;
+}
+
+.note-add input:focus {
+  outline: none;
+}
+
+.note-add .note-form {
+  display: grid;
+  grid-template-columns: auto 200px;
+  gap: 10px;
+}
+
+.note-add .note-form .dynamic-input {
+  grid-column: 1 / span 2;
+  display: flex;
+}
+
+.note-add .note-form .dynamic-input input {
+  flex-grow: 1;
+}
+
+.note-add .note-form .dynamic-input button[type="submit"] {
+  margin-inline-start: 10px;
+  width: 200px;
+  font-size: 24px;
+  border: 2px solid orange;
+  background: transparent;
+  color: orange;
+  border-radius: 50px;
+  transition: .3s;
+}
+
+.note-add .note-form .dynamic-input button[type="submit"]:hover {
+  background-color: orange;
+  color: white;
+}
+
+.note-add .note-types {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.note-add .note-types i {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+.note-add .note-types i.active {
+  background-color: #d8d8d8;
+  color: orange;
+}
+
+.note-add .note-types i:hover {
+  background-color: #d8d8d8;
+  color: orange;
+}

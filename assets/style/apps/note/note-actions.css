@@ -1,0 +1,47 @@
+.note-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  font-size: 1.1em;
+  cursor: auto;
+}
+
+.note-actions i {
+  border-radius: 50%;
+  padding: 7px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.note-actions i:hover {
+  background-color: rgba(154, 160, 166, 0.496);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.note-actions .note-platte {
+  position: absolute;
+  background-color: white;
+  left: -50%;
+  top: -40px;
+  width: max-content;
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  box-shadow: 0 0 5px var(--clr3);
+  border-radius: 50px;
+}
+
+.note-actions .note-platte .platte-color {
+  border-radius: 50%;
+  border: 2px solid transparent;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.note-actions .note-platte .platte-color:hover,
+.note-actions .note-platte .platte-color.active {
+  border: 2px solid black;
+}

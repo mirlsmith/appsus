@@ -15,10 +15,16 @@
 @import 'cmps/user-msg.css';
 @import 'cmps/search-bar.css';
 
-/* Apps */
+/* Mail-App */
 @import 'apps/mail/mail-app.css';
 @import './apps/mail/mail-compose.css';
+
+/* Note-App */
 @import 'apps/note/note-app.css';
+@import 'apps/note/note-preview.css';
+@import 'apps/note/note-actions.css';
+@import 'apps/note/note-add.css';
+@import 'apps/note/note-modal.css';
 
 /* Responsive */
 @import 'apps/mail/responsive-mail.css';
