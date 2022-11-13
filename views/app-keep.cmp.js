@@ -39,21 +39,29 @@ export default {
                 
                 <p v-if="getPinnedNotes.length > 0">PINNED</p>
                 <note-list :notes="getPinnedNotes"
+                    :class="{ 'drag-active': this.isDrag }"
                     enter-class="animate__bounceIn"
                     leave-class="animate__bounceOut"
                     @onNoteClick="handleNoteSelection"
                     @onNotePinned="handleNotePinned"
                     @onNoteRemove="handleNoteRemove"
-                    @onNoteDuplicate="handleNoteDuplicate" />
+                    @onNoteDuplicate="handleNoteDuplicate"
+                    @onDragStart="handleNoteDrag"
+                    @onDrop="handleNoteDrop"
+                />
 
                 <p v-if="getUnpinnedNotes.length > 0" style="margin-top: 32px">OTHERS</p>
                 <note-list :notes="getUnpinnedNotes"
+                    :class="{ 'drag-active': this.isDrag }"
                     enter-class="animate__fadeInDown"
                     leave-class="animate__backOutDown"
                     @onNoteClick="handleNoteSelection"
                     @onNotePinned="handleNotePinned"
                     @onNoteRemove="handleNoteRemove"
-                    @onNoteDuplicate="handleNoteDuplicate" />
+                    @onNoteDuplicate="handleNoteDuplicate"
+                    @onDragStart="handleNoteDrag"
+                    @onDrop="handleNoteDrop"
+                />
 
             </div>
 
@@ -93,7 +101,8 @@ export default {
             },
             todoChangeListener: null,
             txtChangeListener: null,
-            bgColorChangeListener: null
+            bgColorChangeListener: null,
+            isDrag: false
         }
     },
     watch: {
@@ -164,6 +173,22 @@ export default {
                     showSuccessMsg('Changes to the note has been updated successfully!')
                     this.isNoteModalOpen = false
                 })
+        },
+        handleNoteDrag(ev, noteId) {
+            ev.dataTransfer.dropEffect = 'move'
+            ev.dataTransfer.effectAllowed = 'move'
+            ev.dataTransfer.setData('noteId', noteId)
+            this.isDrag = true
+        },
+        handleNoteDrop(ev, droppedOnNnoteId) {
+            this.isDrag = false
+            const noteId = ev.dataTransfer.getData('noteId')
+            const fromIdx = this.notes.findIndex(n => n.id === noteId)
+            const fromNote = this.notes[fromIdx]
+            const toIdx = this.notes.findIndex(n => n.id === droppedOnNnoteId)
+            const toNote = this.notes[toIdx]
+            this.notes.splice(fromIdx, 1, toNote)
+            this.notes.splice(toIdx, 1, fromNote)
         }
     },
     computed: {

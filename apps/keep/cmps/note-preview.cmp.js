@@ -8,6 +8,11 @@ export default {
   props: ['note'],
   template: `
     <article class="note-preview"
+      draggable="true"
+      @dragstart="$emit('onDragStart', $event, note.id)"
+      @drop="$emit('onDrop', $event, note.id)"
+      @dragover.prevent
+      @dragenter.prevent
       :style="note.style"
       @click="$emit('onClick', note)">
       <i class="fa-solid fa-thumbtack pinned"

@@ -13,6 +13,8 @@ export default {
           v-for="note in notes"
           :note="note"
           :key="note.id"
+          @onDragStart="(ev, noteId) => $emit('onDragStart', ev, noteId)"
+          @onDrop="(ev, noteId) => $emit('onDrop', ev, noteId)"
           @onClick="note => $emit('onNoteClick', note)"
           @onPinned="note => $emit('onNotePinned', note)"
           @onRemove="noteId => $emit('onNoteRemove', noteId)"

@@ -115,12 +115,16 @@
 
 /* NOTE-PREVIEW */
 
+.note-list.drag-active .note-preview {
+  border: 2px dashed var(--secondary-clr3) !important;
+}
+
 .note-preview {
   background-color: var(--clr2);
   padding: 15px;
   padding-block-end: 48px;
   position: relative;
-  cursor: pointer;
+  cursor: grab;
   margin-block-end: 10px;
   break-inside: avoid-column;
   border-radius: 5px;
