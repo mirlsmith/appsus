@@ -135,37 +135,6 @@
   opacity: 0;
   transition: .3s;
 }
-
-.note-preview .note-actions .note-platte {
-  position: absolute;
-  background-color: white;
-  left: -50%;
-  top: -40px;
-  width: max-content;
-  display: flex;
-  gap: 5px;
-  padding: 10px;
-  box-shadow: 0 0 5px var(--clr3);
-  border-radius: 50px;
-}
-
-.note-preview .note-actions .note-platte .platte-color {
-  border-radius: 50%;
-  border: 2px solid transparent;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-  transition: .3s;
-}
-
-.note-preview .note-actions .note-platte .platte-color:hover {
-  border: 2px solid black;
-}
-
-.note-preview .note-actions .note-platte .platte-color.active {
-  border: 2px solid black;
-}
-
 .note-preview i.pinned {
   position: absolute;
   inset-inline-end: 10px;
@@ -227,6 +196,33 @@
 .note-actions i:hover {
   background-color: rgba(154, 160, 166, 0.496);
   color: rgba(0, 0, 0, 0.7);
+}
+
+.note-actions .note-platte {
+  position: absolute;
+  background-color: white;
+  left: -50%;
+  top: -40px;
+  width: max-content;
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  box-shadow: 0 0 5px var(--clr3);
+  border-radius: 50px;
+}
+
+.note-actions .note-platte .platte-color {
+  border-radius: 50%;
+  border: 2px solid transparent;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.note-actions .note-platte .platte-color:hover,
+.note-actions .note-platte .platte-color.active {
+  border: 2px solid black;
 }
 
 /* MODAL */
@@ -293,6 +289,7 @@
 .note-modal .modal-content {
   flex-grow: 1;
   padding: 10px;
+  transition: background-color .3s;
 }
 
 .note-modal .modal-actions {
@@ -311,4 +308,8 @@
 
 .note-modal .modal-actions button:hover {
   box-shadow: none;
+}
+
+.note-modal .modal-actions .note-actions {
+  position: relative;
 }

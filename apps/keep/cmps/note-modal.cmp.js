@@ -40,7 +40,7 @@ export default {
       </section>
 
       <section class="modal-actions">
-        <note-actions
+        <note-actions :note="selectedNote"
           @onRemove="$emit('onNoteRemove', selectedNote.id)"
           @onDuplicate="$emit('onNoteDuplicate', selectedNote)"
           @onBgChange="onBgColorChange"
