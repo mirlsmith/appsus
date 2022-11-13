@@ -125,17 +125,6 @@
   break-inside: avoid-column;
   border-radius: 5px;
   transition: background-color .4s;
-  white-space: nowrap; 
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.note-preview label {
-  display: inline-block;
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .note-preview .note-actions {
@@ -199,6 +188,22 @@
 .note-preview i.pinned:hover {
   background-color: rgba(154, 160, 166, 0.496);
   color: rgba(0, 0, 0, 0.7);
+}
+
+/* TODO-LIST */
+
+.note-todos .todos-list {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.note-todos .todos-list label {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* NOTE-ACTIONS */

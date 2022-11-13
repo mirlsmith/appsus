@@ -3,9 +3,9 @@ import { eventBus } from '../../../../services/event-bus.service.js'
 export default {
   props: ['info', 'noteId'],
   template: `
-    <div style="width: max-content">
+    <div class="note-todos">
       <h6>{{ info.title }}</h6>
-      <ul class="clean-list" @click.stop="">
+      <ul class="clean-list todos-list" @click.stop="">
         <li v-for="todo in info.todos">
           <label :style="getIsDoneStyle(todo.isDone)">
             <input type="checkbox" @change="onTodoChange(todo)" v-model="todo.isDone">
