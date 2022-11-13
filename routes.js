@@ -3,8 +3,6 @@ import aboutPage from './views/app-about.cmp.js'
 import keepPage from './views/app-keep.cmp.js'
 import mailPage from './views/app-mail.cmp.js'
 
-import noteDetailsPage from './apps/keep/pages/note-details.cmp.js'
-
 import mailIndexPage from './apps/mail/pages/mail-index.cmp.js'
 import mailDetailsPage from './apps/mail/pages/mail-details.cmp.js'
 
@@ -21,7 +19,6 @@ const routerOptions = {
 			path: '/keep',
 			component: keepPage,
 			children: [
-				{ path: '/keep/details/:id', component: noteDetailsPage },
 				{ path: '/keep/:filterBy', component: keepPage }
 			]
 		},
