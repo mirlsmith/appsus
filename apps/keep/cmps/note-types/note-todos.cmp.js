@@ -6,11 +6,9 @@ export default {
     <div class="note-todos">
       <h6>{{ info.title }}</h6>
       <ul class="clean-list todos-list" @click.stop="">
-        <li v-for="todo in info.todos">
-          <label :style="getIsDoneStyle(todo.isDone)">
-            <input type="checkbox" @change="onTodoChange(todo)" v-model="todo.isDone">
-            {{todo.txt}}
-          </label>
+        <li v-for="(todo, idx) in info.todos" class="flex">
+          <input type="checkbox" @change="onTodoChange(todo)" v-model="todo.isDone" :id="getUniqeTodoId(idx)">
+          <label :style="getIsDoneStyle(todo.isDone)" :for="getUniqeTodoId(idx)">{{ todo.txt }}</label>
         </li>
       </ul>
     </div>
@@ -24,6 +22,9 @@ export default {
     },
     getIsDoneStyle(isDone) {
       return isDone ? 'text-decoration: line-through' : ''
+    },
+    getUniqeTodoId(idx) {
+      return this.noteId + '-' + idx
     }
   }
 }
