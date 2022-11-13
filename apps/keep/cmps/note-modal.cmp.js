@@ -23,11 +23,15 @@ export default {
           class="outline-none">
           {{ selectedNote.info.url || 'Enter a url (YouTube or image link)' }}
         </p>
-        <div v-else style="width: max-content"> <!-- Todos case -->
-          <ul class="clean-list" @click.stop="">
-            <li v-for="todo in selectedNote.info.todos">
-              <label :style="getIsDoneStyle(todo.isDone)">
-                <input type="checkbox" v-model="todo.isDone">
+        <div v-else> <!-- Todos case -->
+          <ul class="clean-list todos-list" @click.stop="">
+            <li v-for="(todo, idx) in selectedNote.info.todos" class="flex">
+              <input type="checkbox" v-model="todo.isDone" :id="getUniqeTodoId(idx)">
+              <label class="outline-none" @click.prevent=""
+                :style="getIsDoneStyle(todo.isDone)"
+                :for="getUniqeTodoId(idx)"
+                contenteditable="true"
+                @input="onTodoTxtChange($event, todo)">
                 {{ todo.txt }}
               </label>
             </li>
@@ -65,6 +69,12 @@ export default {
     },
     onBgColorChange(color) {
       this.selectedNote.style.backgroundColor = color
+    },
+    onTodoTxtChange(ev, todo) {
+      todo.txt = ev.target.innerText
+    },
+    getUniqeTodoId(idx) {
+      return this.selectedNote.id + '-' + idx
     }
   },
   computed: {
