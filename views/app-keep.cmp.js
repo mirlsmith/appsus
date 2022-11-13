@@ -183,12 +183,16 @@ export default {
         handleNoteDrop(ev, droppedOnNnoteId) {
             this.isDrag = false
             const noteId = ev.dataTransfer.getData('noteId')
+
             const fromIdx = this.notes.findIndex(n => n.id === noteId)
             const fromNote = this.notes[fromIdx]
             const toIdx = this.notes.findIndex(n => n.id === droppedOnNnoteId)
             const toNote = this.notes[toIdx]
+
             this.notes.splice(fromIdx, 1, toNote)
             this.notes.splice(toIdx, 1, fromNote)
+
+            notesService.saveNotesOrder(this.notes)
         }
     },
     computed: {

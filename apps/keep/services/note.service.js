@@ -8,7 +8,8 @@ export const notesService = {
     getNoteById,
     remove,
     save,
-    updateNote
+    updateNote,
+    saveNotesOrder
 }
 
 const NOTES_STORAGE_KEY = 'notesDB'
@@ -35,6 +36,10 @@ function save(note, append = true) {
 
 function updateNote(note) {
     return storageService.put(NOTES_STORAGE_KEY, note)
+}
+
+function saveNotesOrder(notes) {
+    storageService.postEntities(NOTES_STORAGE_KEY, notes)
 }
 
 // PRIVATE

@@ -2,6 +2,7 @@ export const storageService = {
     query,
     get,
     post,
+    postEntities,
     put,
     remove,
 }
@@ -26,6 +27,11 @@ function post(entityType, newEntity, append = true) {
         _save(entityType, entities)
         return newEntity
     })
+}
+
+function postEntities(entityType, entities) {
+    _save(entityType, entities)
+    return Promise.resolve(entities)
 }
 
 function put(entityType, updatedEntity) {
