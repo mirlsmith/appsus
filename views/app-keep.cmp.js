@@ -76,7 +76,8 @@ export default {
                     @onNoteRemove="noteId => { handleNoteRemove(noteId); isNoteModalOpen = false }"
                     @onNoteDuplicate="note => { handleNoteDuplicate(note); isNoteModalOpen = false }"
                     @onSaveNote="handleNoteSave"
-                    @onSendToMail="handleMailSend" />
+                    @onSendToMail="handleMailSend"
+                    @onTodoChange="handleTodoChange" />
             </Transition>
         </section>
     `,
@@ -157,6 +158,7 @@ export default {
         handleTodoChange({ noteId, todo }) {
             const note = this.notes.find(n => n.id === noteId)
             if (todo.isDone) todo.doneAt = Date.now()
+            else todo.doneAt = null
             notesService.updateNote(note)
         },
         handleTxtChange({ noteId, info }) {

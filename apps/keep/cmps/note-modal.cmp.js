@@ -26,7 +26,12 @@ export default {
         <div v-else> <!-- Todos case -->
           <ul class="clean-list todos-list" @click.stop="">
             <li v-for="(todo, idx) in selectedNote.info.todos" class="flex">
-              <input type="checkbox" v-model="todo.isDone" :id="getUniqeTodoId(idx)">
+              <input
+                type="checkbox"
+                v-model="todo.isDone"
+                @change="$emit('onTodoChange', { noteId: noteId, todo })"
+                :id="getUniqeTodoId(idx)"
+              />
               <label class="outline-none" @click.prevent=""
                 :style="getIsDoneStyle(todo.isDone)"
                 :for="getUniqeTodoId(idx)"
@@ -34,6 +39,7 @@ export default {
                 @input="onTodoTxtChange($event, todo)">
                 {{ todo.txt }}
               </label>
+              <span class="done-at">{{ getTodoLocaleTime(todo.doneAt) }}</span>
             </li>
           </ul>
         </div>
@@ -75,6 +81,9 @@ export default {
     },
     getUniqeTodoId(idx) {
       return this.selectedNote.id + '-' + idx
+    },
+    getTodoLocaleTime(timestamp) {
+      return timestamp ? new Date(timestamp).toLocaleTimeString() : null
     }
   },
   computed: {

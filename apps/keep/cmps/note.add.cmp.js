@@ -62,9 +62,15 @@ export default {
   methods: {
     getDynamicValue() {
       switch (this.note.type) {
+
         case NOTE_TYPES.NOTE_TODOS:
           return this.dynamicCmpValue.split(',')
-            .map(key => ({ txt: key.trim(), isDone: false }))
+            .map(key => ({
+              txt: key.trim(),
+              isDone: false,
+              doneAt: null
+            }))
+
         case NOTE_TYPES.NOTE_VIDEO:
           const url = new URL(this.dynamicCmpValue)
           const videoId = new URLSearchParams(url.search).get('v')
