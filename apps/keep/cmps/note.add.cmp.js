@@ -61,11 +61,11 @@ export default {
   },
   created() {
     const subject = this.$route.query?.subject?.trim()
-    const body = this.$route.query?.subject?.trim()
+    const body = this.$route.query?.body?.trim()
     if (subject) this.note.info.title = subject
     if (body) this.dynamicCmpValue = body
 
-    if (subject && body) this.isOnFocus = true
+    if (subject && body) setTimeout(() => this.isOnFocus = true, 500)
   },
   methods: {
     getDynamicValue() {
