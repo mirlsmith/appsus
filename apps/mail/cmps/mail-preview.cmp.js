@@ -14,6 +14,7 @@ export default {
             <p class="body">{{mail.body}}</p>
             <span class="date">{{ formattedDate }}</span>
             <div class="actions">
+                <i @click.stop="sendToKeep(mail)" class="fa fa-sticky-note-o" title="Send as note to Keep"></i>
                 <i v-show="mail.isRead"
                     @click.stop="toggleRead"
                     class="fa-solid fa-envelope clk" title="Mark as unread"></i>
@@ -42,6 +43,10 @@ export default {
             }
             this.mail.isDiscarded = true
             mailService.save(this.mail)
+        },
+        sendToKeep(mail) {
+            const {subject, body} = mail
+            this.$router.push(`/keep?subject=${subject}&body=${body}`)
         }
     },
     computed: {
