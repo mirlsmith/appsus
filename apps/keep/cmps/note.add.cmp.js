@@ -59,6 +59,14 @@ export default {
       isOnFocus: false
     }
   },
+  created() {
+    const subject = this.$route.query?.subject?.trim()
+    const body = this.$route.query?.subject?.trim()
+    if (subject) this.note.info.title = subject
+    if (body) this.dynamicCmpValue = body
+
+    if (subject && body) this.isOnFocus = true
+  },
   methods: {
     getDynamicValue() {
       switch (this.note.type) {
