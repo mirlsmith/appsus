@@ -38,7 +38,7 @@ export default {
         if (subject && body) {
             // TODO: Open compose modal with the content
             console.log('subject', subject)
-            console.log('body', body) // for todos-list (array) use JSON.parse
+            console.log('body', body)
         }
     },
     methods: {
