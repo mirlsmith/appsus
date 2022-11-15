@@ -75,7 +75,8 @@ export default {
                     @onClose="isNoteModalOpen = false"
                     @onNoteRemove="noteId => { handleNoteRemove(noteId); isNoteModalOpen = false }"
                     @onNoteDuplicate="note => { handleNoteDuplicate(note); isNoteModalOpen = false }"
-                    @onSaveNote="handleNoteSave" />
+                    @onSaveNote="handleNoteSave"
+                    @onSendToMail="handleMailSend" />
             </Transition>
         </section>
     `,
@@ -84,11 +85,13 @@ export default {
         this.todoChangeListener = eventBus.on('onTodoChange', this.handleTodoChange)
         this.txtChangeListener = eventBus.on('onTxtChange', this.handleTxtChange)
         this.bgColorChangeListener = eventBus.on('onBgChange', payload => this.handleBgChangeChange(payload, true))
+        this.mailSendListener = eventBus.on('onSendToMail', this.handleMailSend)
     },
     unmounted() {
         this.todoChangeListener && this.todoChangeListener()
         this.txtChangeListener && this.txtChangeListener()
         this.bgColorChangeListener && this.bgColorChangeListener()
+        this.mailSendListener && this.mailSendListener()
     },
     data() {
         return {
@@ -102,6 +105,7 @@ export default {
             todoChangeListener: null,
             txtChangeListener: null,
             bgColorChangeListener: null,
+            mailSendListener: null,
             isDrag: false
         }
     },
@@ -193,6 +197,12 @@ export default {
             this.notes.splice(toIdx, 1, fromNote)
 
             notesService.saveNotesOrder(this.notes)
+        },
+        handleMailSend(note) {
+            const { info } = note
+            const subject = info.title
+            const body = info?.txt || info?.url || JSON.stringify(info?.todos || '')
+            this.$router.push(`/mail/index/inbox?subject=${subject}&body=${body}`)
         }
     },
     computed: {

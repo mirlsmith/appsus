@@ -44,7 +44,7 @@ export default {
           @onRemove="$emit('onNoteRemove', selectedNote.id)"
           @onDuplicate="$emit('onNoteDuplicate', selectedNote)"
           @onBgChange="onBgColorChange"
-          @onSendToMail="() => console.log('TODO')" />
+          @onSendToMail="note => $emit('onSendToMail', note)" />
         <button type="button" class="blue-mail-btn" @click="$emit('onSaveNote', selectedNote)">Save</button>
       </section>
     </div>
