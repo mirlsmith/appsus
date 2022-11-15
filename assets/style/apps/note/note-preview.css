@@ -1,5 +1,5 @@
 .note-list.drag-active .note-preview {
-  border: 2px dashed var(--secondary-clr3) !important;
+  outline: 2px dashed var(--secondary-clr3) !important;
 }
 
 .note-preview {
