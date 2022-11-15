@@ -7,12 +7,7 @@ export default {
             <ul class="clean-list">
                 <li v-for="mail in mails" :key="mail.id"
                     @click="showMailDetails(mail.id)">
-                    <mail-preview :mail="mail"/>
-                    
-                    <section class="actions">
-
-                    </section>
-
+                    <mail-preview :mail="mail" />
                 </li>
             </ul>
 
