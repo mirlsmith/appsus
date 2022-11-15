@@ -33,6 +33,14 @@ export default {
             isMailCompose: false,
         }
     },
+    created() {
+        const { subject, body } = this.$route.query
+        if (subject && body) {
+            // TODO: Open compose modal with the content
+            console.log('subject', subject)
+            console.log('body', body) // for todos-list (array) use JSON.parse
+        }
+    },
     methods: {
         closeCompose() {
             this.isMailCompose = false
