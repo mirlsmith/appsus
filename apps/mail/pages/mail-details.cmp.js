@@ -1,13 +1,14 @@
 import { mailService } from "../services/mail.service.js";
 
 export default {
-    template: `
+  template: `
         <section v-if="mail" class="mail-details right-of-sidenav">
           <div class="mail-actions">
             <i 
               @click="goBack()"
               class="fa-solid fa-arrow-left clk"
               title="Go back"></i>
+            <i @click="sendToKeep()" class="fa fa-sticky-note-o clk" title="Send as note to Keep"></i>
             <i
               @click="removeMail()" 
               class="fa-solid fa-trash-can clk"
@@ -23,45 +24,49 @@ export default {
           </div>
         </section>
       `,
-    created() {
-      const id = this.$route.params.id
-      mailService.get(id)
-        .then((mail) => {
-          this.mail = mail
-          this.mail.isRead = true
-          mailService.save(this.mail)
-        })
-      
+  created() {
+    const id = this.$route.params.id
+    mailService.get(id)
+      .then((mail) => {
+        this.mail = mail
+        this.mail.isRead = true
+        mailService.save(this.mail)
+      })
 
+
+  },
+  data() {
+    return {
+      mail: null
+    }
+  },
+  methods: {
+    goBack() {
+      this.$router.go(-1)
     },
-    data() {
-      return {
-        mail: null
-      }
-    },
-    methods: {
-      goBack() {
-        this.$router.go(-1)
-      },
-      removeMail() {
-        if (this.mail.isDiscarded) mailService.remove(this.mail.id).then(()=> {
+    removeMail() {
+      if (this.mail.isDiscarded) mailService.remove(this.mail.id).then(() => {
+        this.goBack()
+      })
+      else {
+        this.mail.isDiscarded = true
+        mailService.save(this.mail).then(() => {
           this.goBack()
         })
-        else {
-          this.mail.isDiscarded = true
-          mailService.save(this.mail).then(()=>{
-            this.goBack()
-          })
-          
-        }
+
       }
     },
-    computed: {
-      formattedDate() {
-        const date = new Date(this.mail.sentTimeStamp*1000)
-        const options = { month: 'long', day: '2-digit', year: 'numeric' }
-        return date.toLocaleDateString('en-GB', options)
+    sendToKeep() {
+      const { subject, body } = this.mail
+      this.$router.push(`/keep?subject=${subject}&body=${body}`)
+    }
+  },
+  computed: {
+    formattedDate() {
+      const date = new Date(this.mail.sentTimeStamp * 1000)
+      const options = { month: 'long', day: '2-digit', year: 'numeric' }
+      return date.toLocaleDateString('en-GB', options)
     }
 
-    }
+  }
 }
