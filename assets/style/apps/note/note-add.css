@@ -1,6 +1,6 @@
 .note-add {
-  width: 40%;
-  margin-block: 10px;
+  width: 100%;
+  margin-block: 10px 20px;
 }
 
 .note-add input {

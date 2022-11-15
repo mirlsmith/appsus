@@ -10,13 +10,18 @@
   }
 
   .note-add {
-    margin-inline: 200px;
+    margin-inline: auto;
+    width: 70%;
   }
 }
 
 @media (min-width: 1000px) {
   .note-list {
     columns: 200px 4;
+  }
+
+  .note-add {
+    width: 50%;
   }
 }
 
@@ -29,5 +34,9 @@
 @media (min-width: 1500px) {
   .note-list {
     columns: 200px 6;
+  }
+
+  .note-add {
+    width: 40%;
   }
 }
