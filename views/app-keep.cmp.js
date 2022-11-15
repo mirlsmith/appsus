@@ -39,7 +39,7 @@ export default {
                 
                 <p v-if="getPinnedNotes.length > 0">PINNED</p>
                 <note-list :notes="getPinnedNotes"
-                    :class="{ 'drag-active': this.isDrag }"
+                    :class="{ 'drag-active': isPinnedDrag }"
                     enter-class="animate__bounceIn"
                     leave-class="animate__bounceOut"
                     @onNoteClick="handleNoteSelection"
@@ -52,7 +52,7 @@ export default {
 
                 <p v-if="getUnpinnedNotes.length > 0" style="margin-top: 32px">OTHERS</p>
                 <note-list :notes="getUnpinnedNotes"
-                    :class="{ 'drag-active': this.isDrag }"
+                    :class="{ 'drag-active': isUnpinnedDrag }"
                     enter-class="animate__fadeInDown"
                     leave-class="animate__backOutDown"
                     @onNoteClick="handleNoteSelection"
@@ -87,6 +87,11 @@ export default {
         this.txtChangeListener = eventBus.on('onTxtChange', this.handleTxtChange)
         this.bgColorChangeListener = eventBus.on('onBgChange', payload => this.handleBgChangeChange(payload, true))
         this.mailSendListener = eventBus.on('onSendToMail', this.handleMailSend)
+
+        window.addEventListener('dragend', () => {
+            this.isPinnedDrag = false
+            this.isUnpinnedDrag = false
+        })
     },
     unmounted() {
         this.todoChangeListener && this.todoChangeListener()
@@ -107,7 +112,8 @@ export default {
             txtChangeListener: null,
             bgColorChangeListener: null,
             mailSendListener: null,
-            isDrag: false
+            isPinnedDrag: false,
+            isUnpinnedDrag: false
         }
     },
     watch: {
@@ -184,10 +190,12 @@ export default {
             ev.dataTransfer.dropEffect = 'move'
             ev.dataTransfer.effectAllowed = 'move'
             ev.dataTransfer.setData('noteId', noteId)
-            this.isDrag = true
+            console.log('this.getPinnedNotes.includes(noteId)', this.getPinnedNotes)
+            this.getPinnedNotes.find(pinnedNote => pinnedNote.id === noteId)
+                ? this.isPinnedDrag = true
+                : this.isUnpinnedDrag = true
         },
         handleNoteDrop(ev, droppedOnNnoteId) {
-            this.isDrag = false
             const noteId = ev.dataTransfer.getData('noteId')
 
             const fromIdx = this.notes.findIndex(n => n.id === noteId)
