@@ -34,12 +34,8 @@ export default {
         }
     },
     created() {
-        const { subject, body } = this.$route.query
-        if (subject && body) {
-            // TODO: Open compose modal with the content
-            console.log('subject', subject)
-            console.log('body', body)
-        }
+        const { note: isNote } = this.$route.query
+        if (isNote) setTimeout(() => this.isMailCompose = true, 500)
     },
     methods: {
         closeCompose() {

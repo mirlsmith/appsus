@@ -41,6 +41,12 @@ export default {
         }
     },
     created(){
+        const { note: isNote, subject, body } = this.$route.query
+        if (isNote) {
+            this.mail.subject = subject
+            this.mail.body = body
+        }
+
         this.unmountedAutoSaveEmail = eventBus.on('emailAutoSaved', this.updateDraftId)
 
         this.autoSaveTimeout = setTimeout(()=>{

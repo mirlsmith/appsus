@@ -213,7 +213,7 @@ export default {
             const subject = info.title
             const todoTexts = info?.todos?.map(todo => todo.txt)
             const body = info?.txt || info?.url || JSON.stringify(todoTexts.toString() || '')
-            this.$router.push(`/mail/index/inbox?subject=${subject}&body=${body}`)
+            this.$router.push(`/mail/index/inbox?subject=${subject}&body=${body}&note=true`)
         }
     },
     computed: {
