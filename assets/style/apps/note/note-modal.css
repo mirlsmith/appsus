@@ -63,6 +63,10 @@
   transition: background-color .3s;
 }
 
+.note-modal .modal-content .todos-list .done-at {
+  margin-inline-start: auto
+}
+
 .note-modal .modal-actions {
   padding: 5px;
   display: flex;
