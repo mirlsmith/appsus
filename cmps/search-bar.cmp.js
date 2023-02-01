@@ -1,3 +1,5 @@
+import { utilService } from '../services/util.service.js'
+
 export default {
     template: `
 
@@ -5,13 +7,21 @@ export default {
             <div class="search-container">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input
-                    @input="onSearched"
+                    @input="handleSearchChange"
                     type="search" placeholder="Search" />
             </div>
         </section>
     `,
+    data() {
+        return {
+            handleSearchChange: () => {}
+        }
+    },
+    created() {
+        this.handleSearchChange = utilService.debounce(this.doSearch, 500)
+    },
     methods: {
-        onSearched(ev){
+        doSearch(ev) {
             const value = ev.target.value.trim()
             this.$emit('searched', value)
         }

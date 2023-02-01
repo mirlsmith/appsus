@@ -2,9 +2,19 @@ export const utilService = {
     makeId,
     loadFromStorage,
     getRandomIntInclusive,
-    saveToStorage
+    saveToStorage,
+    debounce
 }
 
+function debounce(func, timeout = 300) {
+    let timer
+    return (...args) => {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+            func.apply(this, args)
+        }, timeout)
+    }
+}
 
 function makeId(length = 5) {
     var txt = ''
