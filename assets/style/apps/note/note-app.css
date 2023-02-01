@@ -36,7 +36,7 @@
 }
 
 .note-list {
-  columns: auto 1;
+  columns: 200px 1;
   gap: 10px;
 }
 

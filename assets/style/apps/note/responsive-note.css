@@ -2,6 +2,18 @@
   .note-list {
     columns: 200px 2;
   }
+
+  .note-add .note-form {
+    grid-template-columns: auto 200px;
+  }
+
+  .note-form .dynamic-input {
+    grid-column: 1 / span 2;
+  }
+
+  .note-form .dynamic-input button[type="submit"] {
+    width: 200px !important;
+  }
 }
 
 @media (min-width: 768px) {
